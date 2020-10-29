@@ -8,6 +8,8 @@ target 'cloud_dessau_app' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'react-native-appearance', :path => '../node_modules/react-native-appearance'
+
   target 'cloud_dessau_appTests' do
     inherit! :complete
     # Pods for testing
