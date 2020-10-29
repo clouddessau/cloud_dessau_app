@@ -19,6 +19,8 @@
 		621427064067F7B81E113549 /* libPods-cloud_dessau_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB7B46D9879E83B6BE5A962 /* libPods-cloud_dessau_app.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C58A47C0295B4E6A22E32333 /* libPods-cloud_dessau_app-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C102803011D44F78D5905 /* libPods-cloud_dessau_app-tvOSTests.a */; };
+		CF892F73254AB332005FFD6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF892F72254AB332005FFD6A /* GoogleService-Info.plist */; };
+		CF892F74254AB332005FFD6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF892F72254AB332005FFD6A /* GoogleService-Info.plist */; };
 		E3D148FDDFF492F720278D1C /* libPods-cloud_dessau_app-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624658100723F1380D21688F /* libPods-cloud_dessau_app-tvOS.a */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +64,7 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = cloud_dessau_app/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B365FC31071DC58695919CC3 /* Pods-cloud_dessau_app-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloud_dessau_app-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-cloud_dessau_app-tvOSTests/Pods-cloud_dessau_app-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		C17A56260C58C92160284534 /* libPods-cloud_dessau_app-cloud_dessau_appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app-cloud_dessau_appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF892F72254AB332005FFD6A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D18C8BB322C5E80EB732A9A6 /* Pods-cloud_dessau_app-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloud_dessau_app-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-cloud_dessau_app-tvOSTests/Pods-cloud_dessau_app-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC56A2E53CFF15873B49FD75 /* Pods-cloud_dessau_app-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloud_dessau_app-tvOS.release.xcconfig"; path = "Target Support Files/Pods-cloud_dessau_app-tvOS/Pods-cloud_dessau_app-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -159,6 +162,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				CF892F72254AB332005FFD6A /* GoogleService-Info.plist */,
 				13B07FAE1A68108700A75B9A /* cloud_dessau_app */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* cloud_dessau_appTests */,
@@ -194,7 +198,6 @@
 				D18C8BB322C5E80EB732A9A6 /* Pods-cloud_dessau_app-tvOSTests.debug.xcconfig */,
 				B365FC31071DC58695919CC3 /* Pods-cloud_dessau_app-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -342,6 +345,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CF892F73254AB332005FFD6A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
+				CF892F74254AB332005FFD6A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,7 +669,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.johjakob.cloud-dessau";
 				PRODUCT_NAME = cloud_dessau_app;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -686,7 +691,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.johjakob.cloud-dessau";
 				PRODUCT_NAME = cloud_dessau_app;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
