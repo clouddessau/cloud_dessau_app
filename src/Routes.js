@@ -3,9 +3,8 @@ import 'react-native-gesture-handler'
 import { enableScreens } from 'react-native-screens'
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native'
 import { createNativeStackNavigator } from 'react-native-screens/native-stack'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { AppearanceProvider, useColorScheme } from 'react-native-appearance'
 import { AuthContext, AuthProvider } from './AuthProvider'
+import { useColorScheme } from 'react-native-appearance'
 import auth from '@react-native-firebase/auth'
 
 import IndexScreen from './screens/IndexScreen'
@@ -43,16 +42,12 @@ const Routes = () => {
   }, [])
 
   return (
-    <SafeAreaProvider>
-      <AppearanceProvider>
-        <NavigationContainer theme={ scheme === 'dark' ? DarkTheme : DefaultTheme }>
-          <RootStack.Navigator>
-            <RootStack.Screen options={{ headerTitle: "[cloud]", headerLargeTitle: true, headerTranslucent: true }} name="Index" component={IndexScreen} />
-            <RootStack.Screen options={{ stackPresentation: "formSheet" }} name="SignIn" component={SignInStackNavigator} />
-          </RootStack.Navigator>
-        </NavigationContainer>
-      </AppearanceProvider>
-    </SafeAreaProvider>
+    <NavigationContainer theme={ scheme === 'dark' ? DarkTheme : DefaultTheme }>
+      <RootStack.Navigator>
+        <RootStack.Screen options={{ headerTitle: "[cloud]", headerLargeTitle: true, headerTranslucent: true }} name="Index" component={IndexScreen} />
+        <RootStack.Screen options={{ stackPresentation: "formSheet" }} name="SignIn" component={SignInStackNavigator} />
+      </RootStack.Navigator>
+    </NavigationContainer>
   )
 }
 
