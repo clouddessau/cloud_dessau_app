@@ -5,6 +5,7 @@ import { useTheme } from '@react-navigation/native'
 import { useColorScheme } from 'react-native-appearance'
 import ButtonControl from '../controls/ButtonControl'
 import controlColors from '../../styles/controlColors'
+import controlProperties from '../../styles/controlProperties'
 
 const SignInForm = (props) => {
   const onUsernameEdited = (text) => {
@@ -24,33 +25,34 @@ const SignInForm = (props) => {
 
   const passwordInput = useRef()
 
-  const padding = 16
-  const borderRadius = 10
+  const viewPadding = controlProperties.form.padding
+  const viewMargin = viewPadding
+  const viewBorderRadius = controlProperties.form.borderRadius
 
   const styles = StyleSheet.create({
     usernameView: {
-      padding: padding,
+      padding: viewPadding,
       borderColor: colors.border,
       borderWidth: 1,
-      borderTopLeftRadius: borderRadius,
-      borderTopRightRadius: borderRadius,
+      borderTopLeftRadius: viewBorderRadius,
+      borderTopRightRadius: viewBorderRadius,
       flexDirection: 'row'
     },
 
     passwordView: {
-      marginBottom: 16,
-      padding: padding,
+      marginBottom: viewMargin,
+      padding: viewPadding,
       borderColor: colors.border,
       borderWidth: 1,
       borderTopWidth: 0,
-      borderBottomLeftRadius: borderRadius,
-      borderBottomRightRadius: borderRadius,
+      borderBottomLeftRadius: viewBorderRadius,
+      borderBottomRightRadius: viewBorderRadius,
       flexDirection: 'row'
     },
 
     label: {
       flex: 1,
-      paddingRight: 10,
+      paddingRight: viewPadding,
       color: colors.text,
       fontWeight: '600'
     },
