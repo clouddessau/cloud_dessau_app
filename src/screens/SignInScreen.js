@@ -1,14 +1,14 @@
 import React, { useContext, useLayoutEffect, useEffect, useState } from 'react'
-import { View, Text, Button, TextInput, Alert, StyleSheet } from 'react-native'
+import { View, Text, Button, Alert, StyleSheet } from 'react-native'
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTheme } from '@react-navigation/native'
 import { AuthContext } from '../AuthProvider'
-import TextInputStyles from '../styles/TextInputStyles'
+import TextInputControl from '../components/controls/TextInputControl'
+import ButtonControl from '../components/controls/ButtonControl'
 
 const SignInScreen = ({ navigation }) => {
   const insets = useSafeAreaInsets()
   const { colors } = useTheme()
-  const textInputStyles = TextInputStyles()
 
   const { user, error, signIn } = useContext(AuthContext)
   const [email, setEmail] = useState("")
@@ -43,11 +43,9 @@ const SignInScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text>Email</Text>
-        <TextInput style={textInputStyles.input} placeholder="Email" onChangeText={text => setEmail(text)} value={email} />
-        <Text>Password</Text>
-        <TextInput style={textInputStyles.input} placeholder="Password" onChangeText={text => setPassword(text)} value={password} secureTextEntry={true} />
-        <Button onPress={() => onSignIn()} title="Sign in" />
+        <TextInputControl placeholder="Email" onTextChanged={text => setEmail(text)} value={email} autoComplete="email" />
+        <TextInputControl placeholder="Password" onTextChanged={text => setPassword(text)} value={password} secureTextEntry={true} />
+        <ButtonControl onPress={() => onSignIn()} text="Sign in" color="blue" />
       </View>
     </SafeAreaView>
   )
