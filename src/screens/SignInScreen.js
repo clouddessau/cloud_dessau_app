@@ -3,6 +3,7 @@ import { View, Text, Button, Alert, StyleSheet } from 'react-native'
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTheme } from '@react-navigation/native'
 import { AuthContext } from '../AuthProvider'
+import SignInForm from '../components/auth/SignInForm'
 import TextInputControl from '../components/controls/TextInputControl'
 import ButtonControl from '../components/controls/ButtonControl'
 
@@ -43,9 +44,15 @@ const SignInScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <TextInputControl placeholder="Email" onTextChanged={text => setEmail(text)} value={email} autoComplete="email" />
-        <TextInputControl placeholder="Password" onTextChanged={text => setPassword(text)} value={password} secureTextEntry={true} />
-        <ButtonControl onPress={() => onSignIn()} text="Sign in" color="blue" />
+        <SignInForm
+          usernameLabel="Email"
+          onUsernameEdited={text => setEmail(text)}
+          onPasswordEdited={text => setPassword(text)}
+          onSubmit={() => onSignIn()}
+          usernameValue={email}
+          passwordValue={password}
+          usernameIsEmail={true}
+        />
       </View>
     </SafeAreaView>
   )
