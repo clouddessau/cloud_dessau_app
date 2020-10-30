@@ -58,10 +58,6 @@ const SignInForm = (props) => {
     input: {
       flex: 3,
       color: colors.text
-    },
-
-    submitButton: {
-      marginTop: 16
     }
   })
 
