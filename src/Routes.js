@@ -18,7 +18,7 @@ const SignInStack = createNativeStackNavigator()
 const SignInStackNavigator = () => {
   return (
     <SignInStack.Navigator>
-      <SignInStack.Screen name="SignInScreen" component={SignInScreen} />
+      <SignInStack.Screen options={{ headerTitleStyle: { fontFamily: 'SpaceGrotesk-Bold' } }} name="SignInScreen" component={SignInScreen} />
     </SignInStack.Navigator>
   )
 }
