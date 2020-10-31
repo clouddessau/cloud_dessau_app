@@ -3,6 +3,7 @@ import { View, Button, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useTheme } from '@react-navigation/native'
 import { AuthContext } from '../AuthProvider'
+import LogoView from '../components/views/LogoView'
 import StatusView from '../components/views/StatusView'
 import ButtonControl from '../components/controls/ButtonControl'
 import styleProperties from '../styles/styleProperties'
@@ -36,17 +37,22 @@ const IndexScreen = ({ navigation }) => {
       })
   }
 
-  useLayoutEffect(() => {
-    navigation.setOptions({
-      headerRight: () => (
-        <Button onPress={() => user ? signOut() : navigation.navigate('SignIn')} title={user ? "Sign Out" : "Sign In"} />
-      )
-    })
-  }, [navigation, user]);
-
   const styles = StyleSheet.create({
     container: {
       paddingHorizontal: styleProperties.container.padding,
+      flex: 1,
+      justifyContent: 'flex-start'
+    },
+
+    toolbarTop: {
+      alignItems: 'flex-end'
+    },
+
+    headerView: {
+      paddingBottom: 16
+    },
+
+    contentView: {
       flex: 1,
       justifyContent: 'space-between'
     }
@@ -54,10 +60,18 @@ const IndexScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusView openStatus={openStatus} />
-      {user &&
-        <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} color={openStatus ? "red" : "blue"} />
-      }
+      <View style={styles.toolbarTop}>
+        <Button onPress={() => user ? signOut() : navigation.navigate('SignIn')} title={user ? "Sign Out" : "Sign In"} />
+      </View>
+      <View style={styles.headerView}>
+        <LogoView width='30%' height={64} />
+      </View>
+      <View style={styles.contentView}>
+        <StatusView openStatus={openStatus} />
+        {user &&
+          <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} color={openStatus ? "red" : "blue"} />
+        }
+      </View>
     </SafeAreaView>
   )
 }
