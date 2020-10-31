@@ -44,7 +44,7 @@ const Routes = () => {
   return (
     <NavigationContainer theme={ scheme === 'dark' ? DarkTheme : DefaultTheme }>
       <RootStack.Navigator>
-        <RootStack.Screen options={{ headerTitle: "[cloud]", headerLargeTitle: true, headerTranslucent: true }} name="Index" component={IndexScreen} />
+        <RootStack.Screen options={{ headerTitle: "[cloud]", headerLargeTitle: true }} name="Index" component={IndexScreen} />
         <RootStack.Screen options={{ stackPresentation: "formSheet" }} name="SignIn" component={SignInStackNavigator} />
       </RootStack.Navigator>
     </NavigationContainer>
