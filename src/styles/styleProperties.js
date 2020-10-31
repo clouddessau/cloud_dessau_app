@@ -5,6 +5,7 @@ const styleProperties = {
 
   form: {
     padding: 16,
+    fontSize: 16,
     borderRadius: 10
   }
 }
