@@ -22,6 +22,10 @@
 		CF892F73254AB332005FFD6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF892F72254AB332005FFD6A /* GoogleService-Info.plist */; };
 		CF892F74254AB332005FFD6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF892F72254AB332005FFD6A /* GoogleService-Info.plist */; };
 		E3D148FDDFF492F720278D1C /* libPods-cloud_dessau_app-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624658100723F1380D21688F /* libPods-cloud_dessau_app-tvOS.a */; };
+		FC7357B8C54F405FB705A635 /* SpaceGrotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A920E3457A8447D1917A4C7E /* SpaceGrotesk-Bold.ttf */; };
+		C75A240EBCEA4E269C74D840 /* SpaceGrotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 720DA9B7144641FCBB9717C0 /* SpaceGrotesk-Light.ttf */; };
+		EDAC517B06A84B3AB3DDA691 /* SpaceGrotesk-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 061AADB67CB342BEA9377CC1 /* SpaceGrotesk-Medium.ttf */; };
+		691B6B1A57734E73B10729E8 /* SpaceGrotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB9A7D8E03C843B9B6247B1C /* SpaceGrotesk-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F40C102803011D44F78D5905 /* libPods-cloud_dessau_app-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A920E3457A8447D1917A4C7E /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; name = "SpaceGrotesk-Bold.ttf"; path = "../assets/fonts/SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		720DA9B7144641FCBB9717C0 /* SpaceGrotesk-Light.ttf */ = {isa = PBXFileReference; name = "SpaceGrotesk-Light.ttf"; path = "../assets/fonts/SpaceGrotesk-Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		061AADB67CB342BEA9377CC1 /* SpaceGrotesk-Medium.ttf */ = {isa = PBXFileReference; name = "SpaceGrotesk-Medium.ttf"; path = "../assets/fonts/SpaceGrotesk-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DB9A7D8E03C843B9B6247B1C /* SpaceGrotesk-Regular.ttf */ = {isa = PBXFileReference; name = "SpaceGrotesk-Regular.ttf"; path = "../assets/fonts/SpaceGrotesk-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +177,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				99E62C584A1381D4C98AAEF8 /* Pods */,
+				8BEB966921364A30B931A880 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -200,6 +209,18 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		8BEB966921364A30B931A880 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				A920E3457A8447D1917A4C7E /* SpaceGrotesk-Bold.ttf */,
+				720DA9B7144641FCBB9717C0 /* SpaceGrotesk-Light.ttf */,
+				061AADB67CB342BEA9377CC1 /* SpaceGrotesk-Medium.ttf */,
+				DB9A7D8E03C843B9B6247B1C /* SpaceGrotesk-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -348,6 +369,10 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				CF892F73254AB332005FFD6A /* GoogleService-Info.plist in Resources */,
+				FC7357B8C54F405FB705A635 /* SpaceGrotesk-Bold.ttf in Resources */,
+				C75A240EBCEA4E269C74D840 /* SpaceGrotesk-Light.ttf in Resources */,
+				EDAC517B06A84B3AB3DDA691 /* SpaceGrotesk-Medium.ttf in Resources */,
+				691B6B1A57734E73B10729E8 /* SpaceGrotesk-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
