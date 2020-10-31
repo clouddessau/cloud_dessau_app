@@ -27,6 +27,7 @@
 		EDAC517B06A84B3AB3DDA691 /* SpaceGrotesk-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 061AADB67CB342BEA9377CC1 /* SpaceGrotesk-Medium.ttf */; };
 		691B6B1A57734E73B10729E8 /* SpaceGrotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DB9A7D8E03C843B9B6247B1C /* SpaceGrotesk-Regular.ttf */; };
 		22C3F985DC0B4656B7578E20 /* cloud_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BB82AA7E0F542E69D47A6CE /* cloud_logo.png */; };
+		C9F56155EC8E42B4A8B3F14E /* cloud_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 23B96F653FB54478BB15DF56 /* cloud_logo_white.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		061AADB67CB342BEA9377CC1 /* SpaceGrotesk-Medium.ttf */ = {isa = PBXFileReference; name = "SpaceGrotesk-Medium.ttf"; path = "../assets/fonts/SpaceGrotesk-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		DB9A7D8E03C843B9B6247B1C /* SpaceGrotesk-Regular.ttf */ = {isa = PBXFileReference; name = "SpaceGrotesk-Regular.ttf"; path = "../assets/fonts/SpaceGrotesk-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		4BB82AA7E0F542E69D47A6CE /* cloud_logo.png */ = {isa = PBXFileReference; name = "cloud_logo.png"; path = "../assets/images/cloud_logo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		23B96F653FB54478BB15DF56 /* cloud_logo_white.png */ = {isa = PBXFileReference; name = "cloud_logo_white.png"; path = "../assets/images/cloud_logo_white.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 				061AADB67CB342BEA9377CC1 /* SpaceGrotesk-Medium.ttf */,
 				DB9A7D8E03C843B9B6247B1C /* SpaceGrotesk-Regular.ttf */,
 				4BB82AA7E0F542E69D47A6CE /* cloud_logo.png */,
+				23B96F653FB54478BB15DF56 /* cloud_logo_white.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				EDAC517B06A84B3AB3DDA691 /* SpaceGrotesk-Medium.ttf in Resources */,
 				691B6B1A57734E73B10729E8 /* SpaceGrotesk-Regular.ttf in Resources */,
 				22C3F985DC0B4656B7578E20 /* cloud_logo.png in Resources */,
+				C9F56155EC8E42B4A8B3F14E /* cloud_logo_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
