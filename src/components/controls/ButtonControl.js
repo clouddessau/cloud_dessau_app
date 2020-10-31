@@ -27,6 +27,7 @@ const ButtonControl = (props) => {
 
     buttonText: {
       color: controlColors.buttonText[scheme][props.color],
+      fontFamily: 'SpaceGrotesk-Regular',
       fontSize: 20
     }
   })
