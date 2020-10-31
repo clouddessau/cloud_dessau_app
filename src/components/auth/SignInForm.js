@@ -52,7 +52,7 @@ const SignInForm = (props) => {
 
     label: {
       flex: 1,
-      paddingRight: viewPadding,
+      paddingRight: viewPadding / 2,
       color: colors.text,
       fontWeight: '600'
     },
