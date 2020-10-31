@@ -2,10 +2,8 @@ import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
-import { useColorScheme } from 'react-native-appearance'
 import ButtonControl from '../controls/ButtonControl'
-import controlColors from '../../styles/controlColors'
-import controlProperties from '../../styles/controlProperties'
+import styleProperties from '../../styles/styleProperties'
 
 const SignInForm = (props) => {
   const onUsernameEdited = (text) => {
@@ -21,13 +19,12 @@ const SignInForm = (props) => {
   }
 
   const { colors } = useTheme()
-  const scheme = useColorScheme()
 
   const passwordInput = useRef()
 
-  const viewPadding = controlProperties.form.padding
+  const viewPadding = styleProperties.form.padding
   const viewMargin = viewPadding
-  const viewBorderRadius = controlProperties.form.borderRadius
+  const viewBorderRadius = styleProperties.form.borderRadius
 
   const styles = StyleSheet.create({
     usernameView: {
