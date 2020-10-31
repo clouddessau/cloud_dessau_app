@@ -24,6 +24,7 @@ const SignInForm = (props) => {
 
   const viewPadding = styleProperties.form.padding
   const viewMargin = viewPadding
+  const fontSize = styleProperties.form.fontSize
   const viewBorderRadius = styleProperties.form.borderRadius
 
   const styles = StyleSheet.create({
@@ -48,15 +49,18 @@ const SignInForm = (props) => {
     },
 
     label: {
-      flex: 1,
+      flex: 1.5,
       paddingRight: viewPadding / 2,
       color: colors.text,
-      fontWeight: '600'
+      fontFamily: 'SpaceGrotesk-Medium',
+      fontSize: fontSize
     },
 
     input: {
       flex: 3,
-      color: colors.text
+      color: colors.text,
+      fontFamily: 'SpaceGrotesk-Regular',
+      fontSize: fontSize
     }
   })
 
@@ -68,7 +72,7 @@ const SignInForm = (props) => {
           onChangeText={text => onUsernameEdited(text)}
           value={props.usernameValue}
           placeholder={props.usernamePlaceholder}
-          textContentType={props.usernameIsEmail ? "emailAddress" : "username"}
+          textContentType="username"
           autoCompleteType={props.usernameIsEmail ? "email" : "username"}
           autoCapitalize="none"
           autoFocus={true}
