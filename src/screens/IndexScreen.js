@@ -6,6 +6,7 @@ import { AuthContext } from '../AuthProvider'
 import LogoView from '../components/views/LogoView'
 import StatusView from '../components/views/StatusView'
 import ButtonControl from '../components/controls/ButtonControl'
+import ToolbarButtonControl from '../components/controls/ToolbarButtonControl'
 import styleProperties from '../styles/styleProperties'
 import firestore from '@react-native-firebase/firestore'
 
@@ -39,7 +40,7 @@ const IndexScreen = ({ navigation }) => {
 
   const styles = StyleSheet.create({
     container: {
-      paddingHorizontal: styleProperties.container.padding,
+      padding: styleProperties.container.padding,
       flex: 1,
       justifyContent: 'flex-start'
     },
@@ -61,10 +62,10 @@ const IndexScreen = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.toolbarTop}>
-        <Button onPress={() => user ? signOut() : navigation.navigate('SignIn')} title={user ? "Sign Out" : "Sign In"} />
+        <ToolbarButtonControl onPress={() => user ? signOut() : navigation.navigate('SignIn')} text={user ? "Sign Out" : "Sign In"} color={user ? 'red' : 'blue'} />
       </View>
       <View style={styles.headerView}>
-        <LogoView width='30%' height={64} />
+        <LogoView width='40%' height={64} />
       </View>
       <View style={styles.contentView}>
         <StatusView openStatus={openStatus} />

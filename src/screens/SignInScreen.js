@@ -4,13 +4,9 @@ import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
 import { useTheme } from '@react-navigation/native'
 import { AuthContext } from '../AuthProvider'
 import SignInForm from '../components/auth/SignInForm'
-import TextInputControl from '../components/controls/TextInputControl'
-import ButtonControl from '../components/controls/ButtonControl'
+import ToolbarButtonControl from '../components/controls/ToolbarButtonControl'
 
 const SignInScreen = ({ navigation }) => {
-  const insets = useSafeAreaInsets()
-  const { colors } = useTheme()
-
   const { user, error, signIn } = useContext(AuthContext)
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -24,7 +20,7 @@ const SignInScreen = ({ navigation }) => {
       headerTitle: "Admin Sign In",
       headerShown: true,
       headerRight: () => (
-        <Button onPress={() => navigation.pop()} title="Cancel" />
+        <ToolbarButtonControl onPress={() => navigation.pop()} text="Cancel" />
       )
     })
   }, [navigation])
