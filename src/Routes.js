@@ -3,7 +3,7 @@ import 'react-native-gesture-handler'
 import { enableScreens } from 'react-native-screens'
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native'
 import { createNativeStackNavigator } from 'react-native-screens/native-stack'
-import { AuthContext, AuthProvider } from './AuthProvider'
+import { AuthContext } from './AuthProvider'
 import { useColorScheme } from 'react-native-appearance'
 import auth from '@react-native-firebase/auth'
 
@@ -44,7 +44,8 @@ const Routes = () => {
   return (
     <NavigationContainer theme={ scheme === 'dark' ? DarkTheme : DefaultTheme }>
       <RootStack.Navigator>
-        <RootStack.Screen options={{ headerTitle: "[cloud]", headerLargeTitle: true }} name="Index" component={IndexScreen} />
+        <RootStack.Screen options={{ headerShown: false }} name="Index" component={IndexScreen}
+        />
         <RootStack.Screen options={{ stackPresentation: "formSheet" }} name="SignIn" component={SignInStackNavigator} />
       </RootStack.Navigator>
     </NavigationContainer>
