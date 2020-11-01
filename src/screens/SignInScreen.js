@@ -19,7 +19,10 @@ const SignInScreen = ({ navigation }) => {
       headerTitle: "Admin Sign In",
       headerShown: true,
       headerRight: () => (
-        <ToolbarButtonControl onPress={() => navigation.pop()} text="Cancel" />
+        Platform.OS === 'ios' ?
+          <ToolbarButtonControl onPress={() => navigation.pop()} text="Cancel" />
+        :
+          null
       )
     })
   }, [navigation])
