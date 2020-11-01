@@ -49,18 +49,21 @@ const SignInForm = (props) => {
     },
 
     label: {
-      flex: 1.5,
       paddingRight: viewPadding / 2,
       color: colors.text,
       fontFamily: 'SpaceGrotesk-Medium',
-      fontSize: fontSize
+      fontSize: fontSize,
+      flex: 1.5,
+      includeFontPadding: false,
+      textAlignVertical: 'center'
     },
 
     input: {
-      flex: 3,
+      padding: 0,
       color: colors.text,
       fontFamily: 'SpaceGrotesk-Regular',
-      fontSize: fontSize
+      fontSize: fontSize,
+      flex: 3
     }
   })
 
@@ -96,7 +99,7 @@ const SignInForm = (props) => {
           style={styles.input}
         />
       </View>
-      <ButtonControl onPress={() => onSubmit()} text="Sign in" color="blue" />
+      <ButtonControl onPress={() => onSubmit()} text="Sign in" color="blue" disabled={props.usernameValue.length === 0 || props.passwordValue.length === 0} />
     </View>
   )
 }
