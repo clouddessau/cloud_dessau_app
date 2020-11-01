@@ -46,7 +46,7 @@ const Routes = () => {
       <RootStack.Navigator>
         <RootStack.Screen options={{ headerShown: false }} name="Index" component={IndexScreen}
         />
-        <RootStack.Screen options={{ stackPresentation: "formSheet" }} name="SignIn" component={SignInStackNavigator} />
+        <RootStack.Screen options={{ headerShown: false, stackPresentation: "formSheet" }} name="SignIn" component={SignInStackNavigator} />
       </RootStack.Navigator>
     </NavigationContainer>
   )
