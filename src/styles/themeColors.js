@@ -15,18 +15,28 @@ const themeColors = {
       yellow: 'rgb(255, 214, 10)'
     }
   },
+  button: {
+    light: {
+      disabled: 'rgb(229, 229, 234)'
+    },
+    dark: {
+      disabled: 'rgb(44, 44, 46)'
+    }
+  },
   buttonText: {
     light: {
       gray: '#000',
       blue: '#fff',
       red: '#fff',
-      yellow: '#000'
+      yellow: '#000',
+      disabled: '#999'
     },
     dark: {
       gray: '#fff',
       blue: '#fff',
       red: '#fff',
-      yellow: '#000'
+      yellow: '#000',
+      disabled: '#888'
     }
   }
 }
