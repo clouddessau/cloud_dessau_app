@@ -1,5 +1,5 @@
-import React, { useContext, useLayoutEffect, useState } from 'react'
-import { View, Button, StyleSheet } from 'react-native'
+import React, { useContext, useState } from 'react'
+import { View, StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useTheme } from '@react-navigation/native'
 import { AuthContext } from '../AuthProvider'
