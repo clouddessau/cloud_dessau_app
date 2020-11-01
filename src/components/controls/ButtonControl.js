@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { TouchableHighlight, View, Text, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import { useColorScheme } from 'react-native-appearance'
-import controlColors from '../../styles/controlColors'
+import controlColors from '../../styles/themeColors'
 
 const ButtonControl = (props) => {
   const onPress = (e) => {
@@ -20,7 +20,7 @@ const ButtonControl = (props) => {
 
     button: {
       padding: 14,
-      backgroundColor: controlColors.button[scheme][props.color],
+      backgroundColor: controlColors.colors[scheme][props.color],
       borderRadius: 10,
       alignItems: 'center'
     },
@@ -43,12 +43,12 @@ const ButtonControl = (props) => {
 
 ButtonControl.propTypes = {
   text: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['default', 'blue', 'red'])
+  color: PropTypes.oneOf(['gray', 'blue', 'green', 'red', 'yellow'])
 }
 
 ButtonControl.defaultProps = {
   text: 'Button',
-  color: 'default'
+  color: 'gray'
 }
 
 export default ButtonControl

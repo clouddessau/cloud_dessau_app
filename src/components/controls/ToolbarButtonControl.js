@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { TouchableOpacity, View, Text, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
-import controlColors from '../../styles/controlColors'
+import controlColors from '../../styles/themeColors'
 
 const ToolbarButtonControl = (props) => {
   const onPress = (e) => {
@@ -13,7 +13,7 @@ const ToolbarButtonControl = (props) => {
 
   const styles = StyleSheet.create({
     buttonText: {
-      color: controlColors.button[scheme][props.color],
+      color: controlColors.colors[scheme][props.color],
       fontFamily: 'SpaceGrotesk-Regular',
       fontSize: 18
     }
@@ -28,7 +28,7 @@ const ToolbarButtonControl = (props) => {
 
 ToolbarButtonControl.propTypes = {
   text: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['default', 'blue', 'red'])
+  color: PropTypes.oneOf(['gray', 'blue', 'green', 'red', 'yellow'])
 }
 
 ToolbarButtonControl.defaultProps = {
