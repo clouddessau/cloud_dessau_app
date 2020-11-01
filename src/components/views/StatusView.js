@@ -43,8 +43,8 @@ StatusView.propTypes = {
 
 StatusView.defaultProps = {
   openStatus: false,
-  openStatusMessage: '[cloud] is open!',
-  closedStatusMessage: '[cloud] is currently closed.'
+  openStatusMessage: '→ Open',
+  closedStatusMessage: 'Currently closed'
 }
 
 export default StatusView
