@@ -12,8 +12,10 @@ const BaseView = ({ children }) => {
   })
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.view}>
       {children}
     </SafeAreaView>
   )
 }
+
+export default BaseView
