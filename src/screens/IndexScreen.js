@@ -1,13 +1,12 @@
 import React, { useContext, useState } from 'react'
 import { View, StyleSheet } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import { useTheme } from '@react-navigation/native'
 import { AuthContext } from '../AuthProvider'
+import BaseView from '../components/views/BaseView'
 import LogoView from '../components/views/LogoView'
 import StatusView from '../components/views/StatusView'
 import ButtonControl from '../components/controls/ButtonControl'
 import ToolbarButtonControl from '../components/controls/ToolbarButtonControl'
-import styleProperties from '../styles/styleProperties'
 import firestore from '@react-native-firebase/firestore'
 
 const IndexScreen = ({ navigation }) => {
@@ -39,12 +38,6 @@ const IndexScreen = ({ navigation }) => {
   }
 
   const styles = StyleSheet.create({
-    container: {
-      padding: styleProperties.container.padding,
-      flex: 1,
-      justifyContent: 'flex-start'
-    },
-
     toolbarTop: {
       alignItems: 'flex-end'
     },
@@ -60,7 +53,7 @@ const IndexScreen = ({ navigation }) => {
   })
 
   return (
-    <SafeAreaView style={styles.container}>
+    <BaseView>
       <View style={styles.toolbarTop}>
         <ToolbarButtonControl onPress={() => user ? signOut() : navigation.navigate('SignIn')} text={user ? "Sign Out" : "Sign In"} color={user ? 'red' : 'blue'} />
       </View>
@@ -73,7 +66,7 @@ const IndexScreen = ({ navigation }) => {
           <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} color={openStatus ? "red" : "green"} />
         }
       </View>
-    </SafeAreaView>
+    </BaseView>
   )
 }
 
