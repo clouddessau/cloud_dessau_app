@@ -70,7 +70,7 @@ const IndexScreen = ({ navigation }) => {
       <View style={styles.contentView}>
         <StatusView openStatus={openStatus} />
         {user &&
-          <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} color={openStatus ? "red" : "blue"} />
+          <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} color={openStatus ? "red" : "green"} />
         }
       </View>
     </SafeAreaView>
