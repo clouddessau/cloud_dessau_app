@@ -20,7 +20,7 @@ const ToolbarButtonControl = (props) => {
   })
 
   return (
-    <TouchableOpacity style={styles.button} onPress={e => onPress(e)}>
+    <TouchableOpacity style={styles.button} onPress={e => onPress(e)} activeOpacity={.5}>
       <Text style={styles.buttonText}>{props.text}</Text>
     </TouchableOpacity>
   )
