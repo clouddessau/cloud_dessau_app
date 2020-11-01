@@ -1,7 +1,6 @@
 import React, { useContext, useLayoutEffect, useEffect, useState } from 'react'
 import { View, Text, Button, Alert, StyleSheet } from 'react-native'
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context'
-import { useTheme } from '@react-navigation/native'
+import { SafeAreaView } from 'react-native-safe-area-context'
 import { AuthContext } from '../AuthProvider'
 import SignInForm from '../components/auth/SignInForm'
 import ToolbarButtonControl from '../components/controls/ToolbarButtonControl'
