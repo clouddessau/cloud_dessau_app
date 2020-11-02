@@ -3,14 +3,14 @@ const themeColors = {
     black: '#000',
     white: '#fff',
     light: {
-      gray: '#CCCCCC',
+      gray: '#DDD',
       red: '#FF5500',
       yellow: '#FFC94C',
       green: '#52D411',
       blue: '#006AFF'
     },
     dark: {
-      gray: '#444444',
+      gray: '#555',
       red: '#FF5C0A',
       yellow: '#FFC34C',
       green: '#56DE12',
@@ -19,12 +19,14 @@ const themeColors = {
     
     active: {
       light: {
+        gray: '#CCC',
         red: '#E54C00',
         yellow: '#F4B625',
         green: '#49BD0F',
         blue: '#0661E0'
       },
       dark: {
+        gray: '#444',
         red: '#D64700',
         yellow: '#F4AF25',
         green: '#4DC610',
