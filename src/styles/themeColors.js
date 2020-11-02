@@ -1,5 +1,7 @@
 const themeColors = {
   colors: {
+    black: '#000',
+    white: '#fff',
     light: {
       gray: 'rgb(199, 199, 204)',
       blue: 'rgb(0, 122, 255)',
@@ -27,6 +29,7 @@ const themeColors = {
     light: {
       gray: '#000',
       blue: '#fff',
+      green: '#fff',
       red: '#fff',
       yellow: '#000',
       disabled: '#999'
@@ -34,6 +37,7 @@ const themeColors = {
     dark: {
       gray: '#fff',
       blue: '#fff',
+      green: '#fff',
       red: '#fff',
       yellow: '#000',
       disabled: '#888'
