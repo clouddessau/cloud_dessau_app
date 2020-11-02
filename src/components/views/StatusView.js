@@ -4,33 +4,40 @@ import { View, Text, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import { useColorScheme } from 'react-native-appearance'
 import themeColors from '../../styles/themeColors'
-import styleProperties from '../../styles/styleProperties'
+import themeProperties from '../../styles/themeProperties'
 
 const StatusView = (props) => {
   const scheme = useColorScheme()
   const { colors } = useTheme()
 
   const styles = StyleSheet.create({
+    view: {
+      paddingVertical: 6,
+      paddingHorizontal: 10,
+      borderRadius: themeProperties.common.borderRadius,
+      alignSelf: 'flex-start'
+    },
+
     text: {
-      color: colors.text,
+      color: themeColors.colors.white,
       fontSize: 32,
       fontFamily: 'SpaceGrotesk-Bold'
     },
 
-    openText: {
-      color: themeColors.colors[scheme].green
+    open: {
+      backgroundColor: themeColors.colors[scheme].green
     },
 
-    closedText: {
-      color: themeColors.colors[scheme].red
+    closed: {
+      backgroundColor: themeColors.colors[scheme].red
     }
   })
 
-  const textStyles = StyleSheet.compose(styles.text, props.openStatus ? styles.openText : styles.closedText)
+  const viewStyles = StyleSheet.compose(styles.view, props.openStatus ? styles.open : styles.closed)
 
   return (
-    <View>
-      <Text style={textStyles}>{props.openStatus ? props.openStatusMessage : props.closedStatusMessage}</Text>
+    <View style={viewStyles}>
+      <Text style={styles.text}>{props.openStatus ? props.openStatusMessage : props.closedStatusMessage}</Text>
     </View>
   )
 }
@@ -43,8 +50,8 @@ StatusView.propTypes = {
 
 StatusView.defaultProps = {
   openStatus: false,
-  openStatusMessage: '→ Open',
-  closedStatusMessage: 'Currently closed'
+  openStatusMessage: 'Open',
+  closedStatusMessage: 'Closed'
 }
 
 export default StatusView
