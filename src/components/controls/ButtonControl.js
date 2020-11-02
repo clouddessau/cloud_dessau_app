@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Pressable, Text, StyleSheet } from 'react-native'
-import { useTheme } from '@react-navigation/native'
 import { useColorScheme } from 'react-native-appearance'
 import themeColors from '../../styles/themeColors'
 
@@ -12,7 +11,6 @@ const ButtonControl = (props) => {
     }
   }
 
-  const { colors } = useTheme()
   const scheme = useColorScheme()
 
   const styles = StyleSheet.create({
