@@ -3,42 +3,59 @@ const themeColors = {
     black: '#000',
     white: '#fff',
     light: {
-      gray: 'rgb(199, 199, 204)',
-      blue: 'rgb(0, 122, 255)',
-      green: 'rgb(52, 199, 89)',
-      red: 'rgb(255, 59, 48)',
-      yellow: 'rgb(255, 204, 0)'
+      gray: '#CCCCCC',
+      red: '#FF5500',
+      yellow: '#FFC94C',
+      green: '#52D411',
+      blue: '#006AFF'
     },
     dark: {
-      gray: 'rgb(72, 72, 74)',
-      blue: 'rgb(10, 132, 255)',
-      green: 'rgb(48, 209, 88)',
-      red: 'rgb(255, 69, 58)',
-      yellow: 'rgb(255, 214, 10)'
+      gray: '#444444',
+      red: '#FF5C0A',
+      yellow: '#FFC34C',
+      green: '#56DE12',
+      blue: '#1A79FF'
+    },
+    
+    active: {
+      light: {
+        red: '#E54C00',
+        yellow: '#F4B625',
+        green: '#49BD0F',
+        blue: '#0661E0'
+      },
+      dark: {
+        red: '#D64700',
+        yellow: '#F4AF25',
+        green: '#4DC610',
+        blue: '#066BF9'
+      }
     }
   },
+
   button: {
     light: {
-      disabled: 'rgb(229, 229, 234)'
+      disabled: '#CCCCCC'
     },
     dark: {
-      disabled: 'rgb(44, 44, 46)'
+      disabled: '#333333'
     }
   },
+
   buttonText: {
     light: {
       gray: '#000',
-      blue: '#fff',
-      green: '#fff',
-      red: '#fff',
+      blue: '#FFF',
+      green: '#FFF',
+      red: '#FFF',
       yellow: '#000',
       disabled: '#999'
     },
     dark: {
-      gray: '#fff',
-      blue: '#fff',
-      green: '#fff',
-      red: '#fff',
+      gray: '#FFF',
+      blue: '#FFF',
+      green: '#FFF',
+      red: '#FFF',
       yellow: '#000',
       disabled: '#888'
     }
