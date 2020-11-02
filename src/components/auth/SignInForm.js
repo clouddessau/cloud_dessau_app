@@ -25,7 +25,7 @@ const SignInForm = (props) => {
   const viewPadding = styleProperties.form.padding
   const viewMargin = viewPadding
   const fontSize = styleProperties.form.fontSize
-  const viewBorderRadius = styleProperties.form.borderRadius
+  const viewBorderRadius = styleProperties.common.borderRadius
 
   const styles = StyleSheet.create({
     usernameView: {
