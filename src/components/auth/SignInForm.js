@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import ButtonControl from '../controls/ButtonControl'
-import styleProperties from '../../styles/styleProperties'
+import themeProperties from '../../styles/themeProperties'
 
 const SignInForm = (props) => {
   const onUsernameEdited = (text) => {
@@ -22,10 +22,10 @@ const SignInForm = (props) => {
 
   const passwordInput = useRef()
 
-  const viewPadding = styleProperties.form.padding
+  const viewPadding = themeProperties.form.padding
   const viewMargin = viewPadding
-  const fontSize = styleProperties.form.fontSize
-  const viewBorderRadius = styleProperties.common.borderRadius
+  const fontSize = themeProperties.form.fontSize
+  const viewBorderRadius = themeProperties.common.borderRadius
 
   const styles = StyleSheet.create({
     usernameView: {
