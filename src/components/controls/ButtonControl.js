@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { TouchableHighlight, View, Text, StyleSheet } from 'react-native'
+import { Pressable, Text, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
 import { useColorScheme } from 'react-native-appearance'
 import themeColors from '../../styles/themeColors'
@@ -16,15 +16,15 @@ const ButtonControl = (props) => {
   const scheme = useColorScheme()
 
   const styles = StyleSheet.create({
-    container: {
-      borderRadius: 10
-    },
-
     button: {
       padding: 14,
       backgroundColor: themeColors.colors[scheme][props.color],
       borderRadius: 10,
       alignItems: 'center'
+    },
+
+    buttonPressed: {
+      backgroundColor: themeColors.colors.active[scheme][props.color]
     },
 
     buttonText: {
@@ -42,15 +42,23 @@ const ButtonControl = (props) => {
     }
   })
 
-  const disabledButtonStyles = StyleSheet.compose(styles.button, styles.disabledButton)
-  const disabledButtonTextStyles = StyleSheet.compose(styles.buttonText, styles.disabledButtonText)
+  const buttonStyles = props.disabled ? StyleSheet.compose(styles.button, styles.disabledButton) : styles.button
+  const pressedButtonStyles = StyleSheet.compose(styles.button, styles.buttonPressed)
+
+  const buttonTextStyles = props.disabled ? StyleSheet.compose(styles.buttonText, styles.disabledButtonText) : styles.buttonText
 
   return (
-    <TouchableHighlight onPress={e => onPress(e)} style={styles.container} activeOpacity={props.disabled ? 1 : .85} underlayColor="#000">
-      <View style={props.disabled ? disabledButtonStyles : styles.button}>
-        <Text style={props.disabled ? disabledButtonTextStyles : styles.buttonText}>{props.text}</Text>
-      </View>
-    </TouchableHighlight>
+    <Pressable
+      onPress={e => onPress(e)}
+      style={({ pressed }) => (
+        pressed ? pressedButtonStyles : buttonStyles
+      )}
+      disabled={props.disabled}
+    >
+      {({ pressed }) => (
+        <Text style={buttonTextStyles}>{props.text}</Text>
+      )}
+    </Pressable>
   )
 }
 
