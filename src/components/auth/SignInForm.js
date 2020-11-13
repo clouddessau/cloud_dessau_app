@@ -51,8 +51,8 @@ const SignInForm = (props) => {
     label: {
       paddingRight: viewPadding / 2,
       color: colors.text,
-      fontFamily: 'SpaceGrotesk-Medium',
       fontSize: fontSize,
+      fontWeight: '500',
       flex: 1.5,
       includeFontPadding: false,
       textAlignVertical: 'center'
@@ -61,7 +61,6 @@ const SignInForm = (props) => {
     input: {
       padding: 0,
       color: colors.text,
-      fontFamily: 'SpaceGrotesk-Regular',
       fontSize: fontSize,
       flex: 3
     }

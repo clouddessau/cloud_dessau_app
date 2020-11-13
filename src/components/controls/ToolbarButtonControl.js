@@ -14,7 +14,6 @@ const ToolbarButtonControl = (props) => {
   const styles = StyleSheet.create({
     buttonText: {
       color: themeColors.colors[scheme][props.color],
-      fontFamily: 'SpaceGrotesk-Regular',
       fontSize: 18
     }
   })
