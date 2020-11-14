@@ -74,10 +74,12 @@ const themeColors = {
   list: {
     item: {
       light: {
-        background: '#FFF'
+        background: '#FFF',
+        backgroundSelected: '#DDD'
       },
       dark: {
-        background: '#1C1C1C'
+        background: '#1C1C1C',
+        backgroundSelected: '#333'
       }
     }
   }

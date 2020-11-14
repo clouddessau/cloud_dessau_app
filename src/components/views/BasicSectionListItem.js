@@ -25,6 +25,10 @@ const BasicSectionListItem = (props) => {
       borderBottomRightRadius: props.index === numberOfItemsInSection ? themeProperties.common.borderRadius : 0,
     },
 
+    selectedItem: {
+      backgroundColor: themeColors.list.item[scheme].backgroundSelected
+    },
+
     title: {
       color: themeColors.colors[scheme].text,
       fontSize: themeProperties.list.fontSize,
@@ -37,8 +41,15 @@ const BasicSectionListItem = (props) => {
     }
   })
 
+  const selectedItemStyles = StyleSheet.compose(styles.item, styles.selectedItem)
+
   return (
-    <Pressable style={styles.item} onPress={() => onPress(props.id)}>
+    <Pressable
+      style={({ pressed }) => (
+        pressed ? selectedItemStyles : styles.item
+      )}
+      onPress={() => onPress(props.id)}
+    >
       <Text style={styles.title}>{props.title}</Text>
       <Text style={styles.subtitle}>{props.subtitle}</Text>
     </Pressable>
