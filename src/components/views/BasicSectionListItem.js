@@ -32,7 +32,7 @@ const BasicSectionListItem = (props) => {
     },
 
     subtitle: {
-      color: themeColors.colors[scheme].textSecondary,
+      color: props.subtitleColor === "default" ? themeColors.colors[scheme].textSecondary : themeColors.colors[scheme][props.subtitleColor],
       fontSize: themeProperties.list.fontSize
     }
   })
