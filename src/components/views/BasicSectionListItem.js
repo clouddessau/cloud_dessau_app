@@ -11,7 +11,9 @@ const BasicSectionListItem = (props) => {
   const numberOfItemsInSection = props.section.data.length - 1
 
   const onPress = (id) => {
-    props.onPress(id)
+    if (props.selectable) {
+      props.onPress(id)
+    }
   }
 
   const styles = StyleSheet.create({
@@ -46,7 +48,7 @@ const BasicSectionListItem = (props) => {
   return (
     <Pressable
       style={({ pressed }) => (
-        pressed ? selectedItemStyles : styles.item
+        pressed && props.selectable ? selectedItemStyles : styles.item
       )}
       onPress={() => onPress(props.id)}
     >
@@ -62,7 +64,7 @@ BasicSectionListItem.propTypes = {
   subtitle: PropTypes.string,
   titleColor: PropTypes.oneOf(['default', 'blue', 'red']),
   subtitleColor: PropTypes.oneOf(['default', 'red']),
-  disabled: PropTypes.bool,
+  selectable: PropTypes.bool,
   section: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired
 }
@@ -73,7 +75,7 @@ BasicSectionListItem.defaultProps = {
   subtitle: '',
   titleColor: 'default',
   subtitleColor: 'default',
-  disabled: false
+  selectable: true
 }
 
 export default BasicSectionListItem
