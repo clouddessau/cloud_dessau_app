@@ -8,6 +8,10 @@ const styleProperties = {
     padding: 16
   },
 
+  list: {
+    fontSize: 18
+  },
+
   form: {
     padding: 16,
     fontSize: 16
