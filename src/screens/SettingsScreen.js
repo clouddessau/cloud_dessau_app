@@ -11,7 +11,7 @@ const SettingsScreen = ({ navigation }) => {
   const largeHeaderInset = insets.top + 96
 
   const accountListItemTitle = user ? user.email : "Sign In"
-  const accountListItemSubtitle = user ? "Sign Out" : "Test"
+  const accountListItemSubtitle = user ? "Sign Out" : ""
 
   const listSections = [
     {
