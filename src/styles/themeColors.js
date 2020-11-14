@@ -2,16 +2,28 @@ const themeColors = {
   colors: {
     black: '#000',
     white: '#fff',
+
     light: {
-      gray: '#DDD',
-      red: '#FF5500',
+      text: '#000',
+      textSecondary: 'rgba(0, 0, 0, .5)',
+
+      background: '#FFF',
+      backgroundGrouped: '#F2F2F2',
+
+      red: '#FF4000',
       yellow: '#FFC94C',
       green: '#52D411',
       blue: '#006AFF'
     },
     dark: {
-      gray: '#555',
-      red: '#FF5C0A',
+      text: '#FFF',
+      textSecondary: 'rgba(255, 255, 255, .6)',
+
+      background: '#000',
+      backgroundGrouped: '#000',
+      backgroundSecondary: '#1C1C1C',
+
+      red: '#FF470A',
       yellow: '#FFC34C',
       green: '#56DE12',
       blue: '#1A79FF'
@@ -19,15 +31,13 @@ const themeColors = {
     
     active: {
       light: {
-        gray: '#CCC',
-        red: '#E54C00',
+        red: '#E53900',
         yellow: '#F4B625',
         green: '#49BD0F',
         blue: '#0661E0'
       },
       dark: {
-        gray: '#444',
-        red: '#D64700',
+        red: '#D63600',
         yellow: '#F4AF25',
         green: '#4DC610',
         blue: '#066BF9'
@@ -46,7 +56,6 @@ const themeColors = {
 
   buttonText: {
     light: {
-      gray: '#000',
       blue: '#FFF',
       green: '#FFF',
       red: '#FFF',
@@ -54,12 +63,22 @@ const themeColors = {
       disabled: '#999'
     },
     dark: {
-      gray: '#FFF',
       blue: '#FFF',
       green: '#FFF',
       red: '#FFF',
       yellow: '#000',
       disabled: '#888'
+    }
+  },
+
+  list: {
+    item: {
+      light: {
+        background: '#FFF'
+      },
+      dark: {
+        background: '#1C1C1C'
+      }
     }
   }
 }
