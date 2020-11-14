@@ -81,6 +81,15 @@ const themeColors = {
         background: '#1C1C1C',
         backgroundSelected: '#333'
       }
+    },
+
+    separator: {
+      light: {
+        background: 'rgba(0, 0, 0, .1)'
+      },
+      dark: {
+        background: 'rgba(255, 255, 255, .1)'
+      }
     }
   }
 }

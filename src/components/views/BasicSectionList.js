@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
-import { SectionList, Text, StyleSheet } from 'react-native'
+import { SectionList, Text, View, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
 import BasicSectionListItem from './BasicSectionListItem'
 import themeProperties from '../../styles/themeProperties'
@@ -26,6 +26,16 @@ const BasicSectionList = (props) => {
       fontSize: 16,
       fontWeight: '500',
       textTransform: 'uppercase',
+    },
+
+    separatorContainer: {
+      backgroundColor: themeColors.list.item[scheme].background
+    },
+    
+    separator: {
+      marginLeft: themeProperties.container.padding,
+      height: 1,
+      backgroundColor: themeColors.list.separator[scheme].background
     }
   })
 
@@ -45,6 +55,11 @@ const BasicSectionList = (props) => {
         )}
         renderSectionHeader={({ section: { title } }) => (
           <Text style={styles.header}>{title}</Text>
+        )}
+        ItemSeparatorComponent={() => (
+          <View style={styles.separatorContainer}>
+            <View style={styles.separator} />
+          </View>
         )}
         stickySectionHeadersEnabled={props.stickyHeaders}
         style={styles.list}
