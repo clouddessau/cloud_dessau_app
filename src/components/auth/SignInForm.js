@@ -2,8 +2,10 @@ import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 import { View, Text, TextInput, StyleSheet } from 'react-native'
 import { useTheme } from '@react-navigation/native'
+import { useColorScheme } from 'react-native-appearance'
 import ButtonControl from '../controls/ButtonControl'
 import themeProperties from '../../styles/themeProperties'
+import themeColors from '../../styles/themeColors'
 
 const SignInForm = (props) => {
   const onUsernameEdited = (text) => {
@@ -18,6 +20,7 @@ const SignInForm = (props) => {
     props.onSubmit()
   }
 
+  const scheme = useColorScheme()
   const { colors } = useTheme()
 
   const passwordInput = useRef()
@@ -30,6 +33,7 @@ const SignInForm = (props) => {
   const styles = StyleSheet.create({
     usernameView: {
       padding: viewPadding,
+      backgroundColor: themeColors.colors[scheme].background,
       borderColor: colors.border,
       borderWidth: 1,
       borderTopLeftRadius: viewBorderRadius,
@@ -40,6 +44,7 @@ const SignInForm = (props) => {
     passwordView: {
       marginBottom: viewMargin,
       padding: viewPadding,
+      backgroundColor: themeColors.colors[scheme].background,
       borderColor: colors.border,
       borderWidth: 1,
       borderTopWidth: 0,
