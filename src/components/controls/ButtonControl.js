@@ -27,8 +27,8 @@ const ButtonControl = (props) => {
 
     buttonText: {
       color: themeColors.buttonText[scheme][props.color],
-      fontFamily: 'SpaceGrotesk-Medium',
-      fontSize: 20
+      fontSize: 20,
+      fontWeight: '500'
     },
 
     disabledButton: {
