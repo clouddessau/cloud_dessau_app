@@ -10,6 +10,10 @@ const BasicSectionList = (props) => {
   const scheme = useColorScheme()
   const [renderSectionList, setRenderSectionList] = useState(false)
 
+  const onItemSelected = (id) => {
+    props.onItemSelected(id)
+  }
+
   const styles = StyleSheet.create({
     list: {
       padding: themeProperties.container.padding
@@ -37,7 +41,7 @@ const BasicSectionList = (props) => {
       <SectionList
         sections={props.sections}
         renderItem={({ item, section, index }) => (
-          <BasicSectionListItem key={item.key} title={item.title} subtitle={item.subtitle} subtitleColor={item.subtitleColor} section={section} index={index} />
+          <BasicSectionListItem key={item.id} id={item.id} title={item.title} subtitle={item.subtitle} onPress={id => onItemSelected(id)} subtitleColor={item.subtitleColor} section={section} index={index} />
         )}
         renderSectionHeader={({ section: { title } }) => (
           <Text style={styles.header}>{title}</Text>
