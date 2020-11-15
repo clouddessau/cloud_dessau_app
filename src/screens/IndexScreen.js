@@ -70,7 +70,7 @@ const IndexScreen = ({ navigation }) => {
         <ToolbarButtonControl onPress={() => navigation.navigate('Settings')} text="Settings" />
       </View>
       <View style={styles.headerView}>
-        <LogoView width='40%' height={64} />
+        <LogoView width='35%' height={64} />
       </View>
       <View style={styles.contentView}>
         <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingHorizontal: themeProperties.container.padding, paddingVertical: themeProperties.container.padding * 2 }}>
