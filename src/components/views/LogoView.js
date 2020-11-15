@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, Image, StyleSheet } from 'react-native'
+import { Image, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
 
 const LogoView = (props) => {
