@@ -21,7 +21,7 @@ const StatusView = (props) => {
       shadowOffset: themeProperties.common.shadowOffset,
       shadowOpacity: themeProperties.common.shadowOpacity,
       shadowRadius: themeProperties.common.shadowRadiusLarge,
-      elevation: 1
+      elevation: 10
     },
 
     image: {
@@ -42,9 +42,7 @@ const StatusView = (props) => {
     text: {
       fontSize: 32,
       fontWeight: 'bold',
-      textAlign: 'center',
-      lineHeight: 34,
-      //textTransform: 'uppercase'
+      textAlign: 'center'
     },
 
     openText: {

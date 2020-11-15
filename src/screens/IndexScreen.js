@@ -8,7 +8,7 @@ import StatusView from '../components/views/StatusView'
 import ButtonControl from '../components/controls/ButtonControl'
 import ToolbarButtonControl from '../components/controls/ToolbarButtonControl'
 import firestore from '@react-native-firebase/firestore'
-import themeColors from '../styles/themeColors'
+import themeProperties from '../styles/themeProperties'
 
 const IndexScreen = ({ navigation }) => {
   const { user } = useContext(AuthContext)
@@ -53,6 +53,8 @@ const IndexScreen = ({ navigation }) => {
     },
 
     scrollView: {
+      marginTop: themeProperties.container.padding * -2,
+      marginHorizontal: themeProperties.container.padding * -1,
       overflow: 'visible',
       zIndex: 2
     },
@@ -71,7 +73,7 @@ const IndexScreen = ({ navigation }) => {
         <LogoView width='40%' height={64} />
       </View>
       <View style={styles.contentView}>
-        <ScrollView style={styles.scrollView}>
+        <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingHorizontal: themeProperties.container.padding, paddingVertical: themeProperties.container.padding * 2 }}>
           <StatusView openStatus={openStatus} />
         </ScrollView>
         {user &&
