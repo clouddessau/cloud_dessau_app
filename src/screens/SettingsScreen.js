@@ -68,12 +68,8 @@ const SettingsScreen = ({ navigation }) => {
       ]
     },
     {
-      title: "",
+      title: "About",
       data: [
-        {
-          title: "About the App",
-          id: "aboutItem"
-        },
         {
           title: "Send Feedback",
           id: "feedbackItem"
