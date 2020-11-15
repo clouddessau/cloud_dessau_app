@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "271559710943",
+    "firebase_url": "https://cloud-dessau-app.firebaseio.com",
+    "project_id": "cloud-dessau-app",
+    "storage_bucket": "cloud-dessau-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271559710943:android:099f9fb3d5a2b979b2316a",
+        "android_client_info": {
+          "package_name": "com.cloud_dessau_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271559710943-q6mj9rtmkcfq9os04kmhk8m4dote7tt8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCX_8s2tRSyZWCFg0BA1DykcwjiSc4_awE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271559710943-q6mj9rtmkcfq9os04kmhk8m4dote7tt8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
