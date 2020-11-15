@@ -21,7 +21,7 @@ const StatusView = (props) => {
     text: {
       color: themeColors.colors.white,
       fontSize: 32,
-      fontWeight: '600'
+      fontWeight: 'bold'
     },
 
     open: {
