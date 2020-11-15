@@ -27,7 +27,7 @@ const StatusView = (props) => {
     image: {
       marginBottom: themeProperties.container.padding * 2,
       width: '80%',
-      height: 200,
+      height: 220,
       tintColor: themeColors.colors[scheme].text,
       resizeMode: 'contain',
       alignSelf: 'center'
