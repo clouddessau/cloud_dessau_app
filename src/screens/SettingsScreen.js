@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Linking, Alert, Platform } from 'react-native'
 import { AuthContext } from '../AuthProvider'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import BasicSectionList from '../components/views/BasicSectionList'
@@ -29,12 +30,26 @@ const SettingsScreen = ({ navigation }) => {
     }
   }
 
+  async function feedbackAction() {
+    let emailURL = `mailto:hi@johjakob.com?subject=[cloud]%20app%20(${Platform.OS === 'ios' ? 'iOS' : 'Android'})`
+
+    const supported = await Linking.canOpenURL(emailURL)
+
+    if (supported) {
+      await Linking.openURL(emailURL)
+    } else {
+      Alert.alert(`The URL ${emailURL} cannot be opened on this device.`)
+    }
+  }
+
   const onItemSelected = (id) => {
     switch (id) {
       case "accountItem":
         accountAction()
         break
-    
+      case "feedbackItem":
+        feedbackAction()
+        break
       default:
         break
     }
@@ -56,8 +71,12 @@ const SettingsScreen = ({ navigation }) => {
       title: "",
       data: [
         {
-          title: "About the app",
+          title: "About the App",
           id: "aboutItem"
+        },
+        {
+          title: "Send Feedback",
+          id: "feedbackItem"
         }
       ]
     }
