@@ -16,12 +16,14 @@ const BasicSectionList = (props) => {
 
   const styles = StyleSheet.create({
     list: {
-      padding: themeProperties.container.padding
+      padding: themeProperties.container.padding,
+      paddingTop: 0
     },
 
     header: {
       paddingHorizontal: themeProperties.container.padding,
-      paddingBottom: 8,
+      paddingTop: themeProperties.container.padding,
+      paddingBottom: themeProperties.container.padding / 2,
       color: themeColors.colors[scheme].textSecondary,
       fontSize: 16,
       fontWeight: '500',
