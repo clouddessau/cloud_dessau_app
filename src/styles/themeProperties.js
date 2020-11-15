@@ -1,7 +1,11 @@
 const styleProperties = {
   common: {
     borderRadiusSmall: 5,
-    borderRadius: 10
+    borderRadius: 10,
+
+    shadowOffset: {width: 0, height: 10},
+    shadowOpacity: .2,
+    shadowRadiusLarge: 20
   },
 
   container: {

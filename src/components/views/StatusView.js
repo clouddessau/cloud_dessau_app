@@ -1,43 +1,69 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { View, Text, StyleSheet } from 'react-native'
-import { useTheme } from '@react-navigation/native'
+import { View, Image, Text, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
 import themeColors from '../../styles/themeColors'
 import themeProperties from '../../styles/themeProperties'
 
 const StatusView = (props) => {
   const scheme = useColorScheme()
-  const { colors } = useTheme()
+
+  const openImage = require('../../../assets/images/status_open.png')
+  const closedImage = require('../../../assets/images/status_closed.png')
 
   const styles = StyleSheet.create({
-    view: {
-      paddingVertical: 6,
-      paddingHorizontal: 10,
-      borderRadius: themeProperties.common.borderRadius,
-      alignSelf: 'flex-start'
+    container: {
+      marginTop: themeProperties.container.padding,
+      padding: themeProperties.container.padding * 2,
+      backgroundColor: themeColors.colors[scheme].background,
+      borderRadius: themeProperties.common.borderRadius * 2,
+      shadowColor: themeColors.colors.black,
+      shadowOffset: themeProperties.common.shadowOffset,
+      shadowOpacity: themeProperties.common.shadowOpacity,
+      shadowRadius: themeProperties.common.shadowRadiusLarge,
+      elevation: 1
+    },
+
+    image: {
+      marginBottom: themeProperties.container.padding * 2,
+      width: '80%',
+      height: 200,
+      tintColor: themeColors.colors[scheme].text,
+      resizeMode: 'contain',
+      alignSelf: 'center'
+    },
+
+    textView: {
+      paddingTop: themeProperties.container.padding * 2,
+      borderTopColor: themeColors.list.separator[scheme].background,
+      borderTopWidth: 1
     },
 
     text: {
-      color: themeColors.colors.white,
       fontSize: 32,
-      fontWeight: 'bold'
+      fontWeight: 'bold',
+      textAlign: 'center',
+      lineHeight: 34,
+      //textTransform: 'uppercase'
     },
 
-    open: {
-      backgroundColor: themeColors.colors[scheme].green
+    openText: {
+      color: themeColors.colors[scheme].green
     },
 
-    closed: {
-      backgroundColor: themeColors.colors[scheme].red
+    closedText: {
+      color: themeColors.colors[scheme].red
     }
   })
 
-  const viewStyles = StyleSheet.compose(styles.view, props.openStatus ? styles.open : styles.closed)
+  const textStyles = StyleSheet.compose(styles.text, props.openStatus ? styles.openText : styles.closedText)
 
   return (
-    <View style={viewStyles}>
-      <Text style={styles.text}>{props.openStatus ? props.openStatusMessage : props.closedStatusMessage}</Text>
+    <View style={styles.container}>
+      <Image style={styles.image} source={props.openStatus ? openImage : closedImage} />
+      <View style={styles.textView}>
+        <Text style={textStyles}>{props.openStatus ? props.openStatusMessage : props.closedStatusMessage}</Text>
+      </View>
     </View>
   )
 }
@@ -50,8 +76,8 @@ StatusView.propTypes = {
 
 StatusView.defaultProps = {
   openStatus: false,
-  openStatusMessage: 'Open',
-  closedStatusMessage: 'Closed'
+  openStatusMessage: 'We’re open!',
+  closedStatusMessage: 'We’re closed!'
 }
 
 export default StatusView

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
-import { View, StyleSheet } from 'react-native'
-import { useTheme } from '@react-navigation/native'
+import { View, ScrollView, StyleSheet } from 'react-native'
+import { useColorScheme } from 'react-native-appearance'
 import { AuthContext } from '../AuthProvider'
 import BaseView from '../components/views/BaseView'
 import LogoView from '../components/views/LogoView'
@@ -8,12 +8,13 @@ import StatusView from '../components/views/StatusView'
 import ButtonControl from '../components/controls/ButtonControl'
 import ToolbarButtonControl from '../components/controls/ToolbarButtonControl'
 import firestore from '@react-native-firebase/firestore'
+import themeColors from '../styles/themeColors'
 
 const IndexScreen = ({ navigation }) => {
-  const { user, signOut } = useContext(AuthContext)
+  const { user } = useContext(AuthContext)
   const [openStatus, setOpenStatus] = useState(false)
 
-  const { colors } = useTheme()
+  const scheme = useColorScheme()
 
   const onFirestoreResult = (snapshot) => {
     setOpenStatus(snapshot.get('open'))
@@ -39,21 +40,30 @@ const IndexScreen = ({ navigation }) => {
 
   const styles = StyleSheet.create({
     toolbarTop: {
-      alignItems: 'flex-end'
+      alignItems: 'flex-end',
     },
 
     headerView: {
-      paddingBottom: 16
+      paddingBottom: 16,
     },
 
     contentView: {
       flex: 1,
       justifyContent: 'space-between'
+    },
+
+    scrollView: {
+      overflow: 'visible',
+      zIndex: 2
+    },
+
+    toggleButtonView: {
+      zIndex: 1
     }
   })
 
   return (
-    <BaseView>
+    <BaseView background="backgroundGrouped">
       <View style={styles.toolbarTop}>
         <ToolbarButtonControl onPress={() => navigation.navigate('Settings')} text="Settings" />
       </View>
@@ -61,9 +71,13 @@ const IndexScreen = ({ navigation }) => {
         <LogoView width='40%' height={64} />
       </View>
       <View style={styles.contentView}>
-        <StatusView openStatus={openStatus} />
+        <ScrollView style={styles.scrollView}>
+          <StatusView openStatus={openStatus} />
+        </ScrollView>
         {user &&
-          <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} color={openStatus ? "red" : "green"} />
+          <View style={styles.toggleButtonView}>
+            <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} color={openStatus ? "red" : "green"} />
+          </View>
         }
       </View>
     </BaseView>
