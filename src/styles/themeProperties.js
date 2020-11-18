@@ -3,8 +3,10 @@ const styleProperties = {
     borderRadiusSmall: 5,
     borderRadius: 10,
 
-    shadowOffset: {width: 0, height: 10},
+    shadowOffset: {width: 0, height: 5},
+    shadowOffsetLarge: {width: 0, height: 10},
     shadowOpacity: .2,
+    shadowRadius: 10,
     shadowRadiusLarge: 20
   },
 
