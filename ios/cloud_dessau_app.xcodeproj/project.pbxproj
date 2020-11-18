@@ -27,6 +27,13 @@
 		E3D148FDDFF492F720278D1C /* libPods-cloud_dessau_app-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624658100723F1380D21688F /* libPods-cloud_dessau_app-tvOS.a */; };
 		E601385830C74F35A97265D2 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5797C8AF2C72463793675B50 /* app_icon.png */; };
 		FC99A49A3D4C434CAB1C84DA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003A13CFEAD46CD8C58C560 /* settings.png */; };
+		502735741BD542ED8942F118 /* disclosure_indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = E2CD7FEE243E4A3D9AA46CB5 /* disclosure_indicator.png */; };
+		DCF16F4384574425A4680422 /* discord.png in Resources */ = {isa = PBXBuildFile; fileRef = 6A6E92E80B2E4984B7903689 /* discord.png */; };
+		A14441D3B5F24A739892CEC7 /* external_link.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB86FE127BB4F138ACC3CC6 /* external_link.png */; };
+		73D42E478DB24C35B251835A /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF80089E4D94986BE37D584 /* info.png */; };
+		81166573B2BB4B478C3F3E85 /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = F472F46D728F41CEA16C2934 /* instagram.png */; };
+		45CC0CBD387B402DBA7E478E /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BA004A977B049F9808CBDC4 /* mail.png */; };
+		C8BC19E5372F417AAEC48C8D /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 00BC6CE7A4DB43E99339F1EC /* user.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +87,13 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F40C102803011D44F78D5905 /* libPods-cloud_dessau_app-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2CD7FEE243E4A3D9AA46CB5 /* disclosure_indicator.png */ = {isa = PBXFileReference; name = "disclosure_indicator.png"; path = "../assets/images/icons/disclosure_indicator.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6A6E92E80B2E4984B7903689 /* discord.png */ = {isa = PBXFileReference; name = "discord.png"; path = "../assets/images/icons/discord.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AFB86FE127BB4F138ACC3CC6 /* external_link.png */ = {isa = PBXFileReference; name = "external_link.png"; path = "../assets/images/icons/external_link.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FCF80089E4D94986BE37D584 /* info.png */ = {isa = PBXFileReference; name = "info.png"; path = "../assets/images/icons/info.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F472F46D728F41CEA16C2934 /* instagram.png */ = {isa = PBXFileReference; name = "instagram.png"; path = "../assets/images/icons/instagram.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9BA004A977B049F9808CBDC4 /* mail.png */ = {isa = PBXFileReference; name = "mail.png"; path = "../assets/images/icons/mail.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		00BC6CE7A4DB43E99339F1EC /* user.png */ = {isa = PBXFileReference; name = "user.png"; path = "../assets/images/icons/user.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +219,13 @@
 				24ACAE9CC3744C71BDC76E91 /* status_open.png */,
 				5797C8AF2C72463793675B50 /* app_icon.png */,
 				2003A13CFEAD46CD8C58C560 /* settings.png */,
+				E2CD7FEE243E4A3D9AA46CB5 /* disclosure_indicator.png */,
+				6A6E92E80B2E4984B7903689 /* discord.png */,
+				AFB86FE127BB4F138ACC3CC6 /* external_link.png */,
+				FCF80089E4D94986BE37D584 /* info.png */,
+				F472F46D728F41CEA16C2934 /* instagram.png */,
+				9BA004A977B049F9808CBDC4 /* mail.png */,
+				00BC6CE7A4DB43E99339F1EC /* user.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -376,6 +397,13 @@
 				6C628D898C844C8F8781F94A /* status_open.png in Resources */,
 				E601385830C74F35A97265D2 /* app_icon.png in Resources */,
 				FC99A49A3D4C434CAB1C84DA /* settings.png in Resources */,
+				502735741BD542ED8942F118 /* disclosure_indicator.png in Resources */,
+				DCF16F4384574425A4680422 /* discord.png in Resources */,
+				A14441D3B5F24A739892CEC7 /* external_link.png in Resources */,
+				73D42E478DB24C35B251835A /* info.png in Resources */,
+				81166573B2BB4B478C3F3E85 /* instagram.png in Resources */,
+				45CC0CBD387B402DBA7E478E /* mail.png in Resources */,
+				C8BC19E5372F417AAEC48C8D /* user.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
