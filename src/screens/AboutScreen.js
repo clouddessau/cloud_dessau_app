@@ -37,7 +37,7 @@ const AboutScreen = ({ navigation }) => {
     },
 
     appInfoIconContainer: {
-      marginRight: themeProperties.container.padding * 1.5,
+      marginRight: themeProperties.container.padding,
       shadowColor: themeColors.colors.black,
       shadowOffset: themeProperties.common.shadowOffset,
       shadowOpacity: themeProperties.common.shadowOpacity,
@@ -46,8 +46,8 @@ const AboutScreen = ({ navigation }) => {
     },
 
     appInfoIcon: {
-      width: 100,
-      height: 100
+      width: 80,
+      height: 80
     },
 
     appInfoText: {
