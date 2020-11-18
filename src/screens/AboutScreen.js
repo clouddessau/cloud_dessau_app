@@ -16,6 +16,9 @@ const AboutScreen = ({ navigation }) => {
       case "instagramItem":
         instagramAction()
         break
+      case "discordItem":
+        discordAction()
+        break
       case "feedbackItem":
         feedbackAction()
         break
@@ -86,6 +89,18 @@ const AboutScreen = ({ navigation }) => {
 
     if (supported) {
       await Linking.openURL(instagramURL)
+    } else {
+      Alert.alert(linkOpenFailedMessage)
+    }
+  }
+
+  async function discordAction() {
+    let discordURL = "https://discord.gg/DjSgmyU"
+
+    const supported = await Linking.canOpenURL(discordURL)
+
+    if (supported) {
+      await Linking.openURL(discordURL)
     } else {
       Alert.alert(linkOpenFailedMessage)
     }
