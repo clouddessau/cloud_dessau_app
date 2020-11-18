@@ -18,7 +18,7 @@ const StatusView = (props) => {
       backgroundColor: themeColors.colors[scheme].background,
       borderRadius: themeProperties.common.borderRadius * 2,
       shadowColor: themeColors.colors.black,
-      shadowOffset: themeProperties.common.shadowOffset,
+      shadowOffset: themeProperties.common.shadowOffsetLarge,
       shadowOpacity: themeProperties.common.shadowOpacity,
       shadowRadius: themeProperties.common.shadowRadiusLarge,
       elevation: 10
