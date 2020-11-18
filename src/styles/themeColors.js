@@ -19,9 +19,8 @@ const themeColors = {
       text: '#FFF',
       textSecondary: 'rgba(255, 255, 255, .6)',
 
-      background: '#000',
+      background: '#1C1C1C',
       backgroundGrouped: '#000',
-      backgroundSecondary: '#1C1C1C',
 
       red: '#FF470A',
       yellow: '#FFC34C',

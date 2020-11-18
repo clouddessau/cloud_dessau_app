@@ -10,6 +10,7 @@ import auth from '@react-native-firebase/auth'
 import IndexScreen from './screens/IndexScreen'
 import SettingsScreen from './screens/SettingsScreen'
 import SignInScreen from './screens/SignInScreen'
+import AboutScreen from './screens/AboutScreen'
 
 enableScreens()
 
@@ -48,6 +49,7 @@ const Routes = () => {
         <RootStack.Screen options={{ headerShown: false }} name="Index" component={IndexScreen} />
         <RootStack.Screen options={{ headerLargeTitle: true, headerBackTitle: "Back" }} name="Settings" component={SettingsScreen} />
         <RootStack.Screen options={{ headerShown: false, stackPresentation: "formSheet" }} name="SignIn" component={SignInStackNavigator} />
+        <RootStack.Screen options={{ headerLargeTitle: true }} name="About" component={AboutScreen} />
       </RootStack.Navigator>
     </NavigationContainer>
   )

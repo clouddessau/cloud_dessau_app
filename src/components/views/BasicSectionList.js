@@ -30,6 +30,12 @@ const BasicSectionList = (props) => {
       textTransform: 'uppercase',
     },
 
+    listFooter: {
+      marginTop: themeProperties.container.padding / 2,
+      marginHorizontal: themeProperties.container.padding,
+      color: themeColors.colors[scheme].textSecondary
+    },
+
     separatorContainer: {
       backgroundColor: themeColors.list.item[scheme].background
     },
@@ -53,7 +59,7 @@ const BasicSectionList = (props) => {
       <SectionList
         sections={props.sections}
         renderItem={({ item, section, index }) => (
-          <BasicSectionListItem key={item.id} id={item.id} title={item.title} subtitle={item.subtitle} onPress={id => onItemSelected(id)} subtitleColor={item.subtitleColor} section={section} index={index} selectable={item.selectable} />
+          item.customItem ? item.customItem : <BasicSectionListItem key={item.id} id={item.id} title={item.title} subtitle={item.subtitle} onPress={id => onItemSelected(id)} subtitleColor={item.subtitleColor} leftIcon={item.leftIcon} rightIcon={item.rightIcon} iconColor={item.iconColor} numberOfLines={item.numberOfLines} section={section} index={index} selectable={item.selectable} />
         )}
         renderSectionHeader={({ section: { title } }) => (
           <Text style={styles.header}>{title}</Text>
@@ -62,6 +68,9 @@ const BasicSectionList = (props) => {
           <View style={styles.separatorContainer}>
             <View style={styles.separator} />
           </View>
+        )}
+        ListFooterComponent={() => (
+          <Text style={styles.listFooter}>{props.listFooterText}</Text>
         )}
         stickySectionHeadersEnabled={props.stickyHeaders}
         style={styles.list}

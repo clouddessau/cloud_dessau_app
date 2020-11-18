@@ -1,7 +1,13 @@
 const styleProperties = {
   common: {
     borderRadiusSmall: 5,
-    borderRadius: 10
+    borderRadius: 10,
+
+    shadowOffset: {width: 0, height: 5},
+    shadowOffsetLarge: {width: 0, height: 10},
+    shadowOpacity: .2,
+    shadowRadius: 10,
+    shadowRadiusLarge: 20
   },
 
   container: {
@@ -9,12 +15,17 @@ const styleProperties = {
   },
 
   list: {
-    fontSize: 18
+    fontSize: 18,
+    iconSize: 24,
   },
 
   form: {
     padding: 16,
     fontSize: 16
+  },
+
+  icon: {
+    size: 32
   }
 }
 
