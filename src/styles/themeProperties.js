@@ -15,7 +15,8 @@ const styleProperties = {
   },
 
   list: {
-    fontSize: 18
+    fontSize: 18,
+    iconSize: 24,
   },
 
   form: {
