@@ -30,6 +30,12 @@ const BasicSectionList = (props) => {
       textTransform: 'uppercase',
     },
 
+    listFooter: {
+      marginTop: themeProperties.container.padding / 2,
+      marginHorizontal: themeProperties.container.padding,
+      color: themeColors.colors[scheme].textSecondary
+    },
+
     separatorContainer: {
       backgroundColor: themeColors.list.item[scheme].background
     },
@@ -62,6 +68,9 @@ const BasicSectionList = (props) => {
           <View style={styles.separatorContainer}>
             <View style={styles.separator} />
           </View>
+        )}
+        ListFooterComponent={() => (
+          <Text style={styles.listFooter}>{props.listFooterText}</Text>
         )}
         stickySectionHeadersEnabled={props.stickyHeaders}
         style={styles.list}
