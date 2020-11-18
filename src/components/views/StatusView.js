@@ -14,7 +14,7 @@ const StatusView = (props) => {
   const styles = StyleSheet.create({
     container: {
       marginTop: themeProperties.container.padding,
-      padding: themeProperties.container.padding * 2,
+      padding: themeProperties.container.padding * 1.5,
       backgroundColor: themeColors.colors[scheme].background,
       borderRadius: themeProperties.common.borderRadius * 2,
       shadowColor: themeColors.colors.black,
@@ -25,16 +25,16 @@ const StatusView = (props) => {
     },
 
     image: {
-      marginBottom: themeProperties.container.padding * 2,
-      width: '80%',
-      height: 220,
+      marginBottom: themeProperties.container.padding * 1.5,
+      width: '90%',
+      height: 160,
       tintColor: themeColors.colors[scheme].text,
       resizeMode: 'contain',
       alignSelf: 'center'
     },
 
     textView: {
-      paddingTop: themeProperties.container.padding * 2,
+      paddingTop: themeProperties.container.padding * 1.5,
       borderTopColor: themeColors.list.separator[scheme].background,
       borderTopWidth: 1
     },
