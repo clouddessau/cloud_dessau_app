@@ -19,6 +19,10 @@ const styleProperties = {
   form: {
     padding: 16,
     fontSize: 16
+  },
+
+  icon: {
+    size: 32
   }
 }
 

@@ -67,7 +67,7 @@ const IndexScreen = ({ navigation }) => {
   return (
     <BaseView background="backgroundGrouped">
       <View style={styles.toolbarTop}>
-        <ToolbarButtonControl onPress={() => navigation.navigate('Settings')} text="Settings" />
+        <ToolbarButtonControl onPress={() => navigation.navigate('Settings')} icon="settings" />
       </View>
       <View style={styles.headerView}>
         <LogoView width='35%' height={64} />
