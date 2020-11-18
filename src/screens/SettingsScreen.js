@@ -55,6 +55,8 @@ const SettingsScreen = ({ navigation }) => {
           title: accountListItemTitle,
           subtitle: accountListItemSubtitle,
           subtitleColor: "red",
+          leftIcon: "user",
+          numberOfLines: 1,
           id: "accountItem"
         }
       ]
@@ -64,6 +66,8 @@ const SettingsScreen = ({ navigation }) => {
       data: [
         {
           title: "About",
+          leftIcon: "info",
+          rightIcon: "disclosureIndicator",
           id: "aboutItem"
         }
       ]
