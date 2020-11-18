@@ -1,11 +1,21 @@
 import React from 'react'
-import { View, ScrollView, Linking, Alert, Platform, StyleSheet } from 'react-native'
+import { View, Text, Image, Linking, Alert, Platform, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
+import DeviceInfo from 'react-native-device-info'
 import BasicSectionList from '../components/views/BasicSectionList'
+import themeProperties from '../styles/themeProperties'
+import themeColors from '../styles/themeColors'
 
 const AboutScreen = ({ navigation }) => {
+  const scheme = useColorScheme()
+
+  const linkOpenFailedMessage = "The link could not be opened."
+
   const onItemSelected = (id) => {
     switch (id) {
+      case "instagramItem":
+        instagramAction()
+        break
       case "feedbackItem":
         feedbackAction()
         break
@@ -14,6 +24,70 @@ const AboutScreen = ({ navigation }) => {
         break
       default:
         break
+    }
+  }
+
+  const styles = StyleSheet.create({
+    appInfoContainer: {
+      flexDirection: 'row',
+      alignItems: 'center'
+    },
+
+    appInfoIconContainer: {
+      marginRight: themeProperties.container.padding * 1.5,
+      shadowColor: themeColors.colors.black,
+      shadowOffset: themeProperties.common.shadowOffset,
+      shadowOpacity: themeProperties.common.shadowOpacity,
+      shadowRadius: themeProperties.common.shadowRadius,
+      elevation: 10
+    },
+
+    appInfoIcon: {
+      width: 100,
+      height: 100
+    },
+
+    appInfoText: {
+      marginBottom: 2,
+      color: themeColors.colors[scheme].text,
+      fontSize: 16,
+      fontWeight: 'bold'
+    },
+
+    appInfoSecondaryText: {
+      color: themeColors.colors[scheme].textSecondary
+    },
+
+    appInfoSlogan: {
+      color: themeColors.colors[scheme].textSecondary,
+      marginTop: 8
+    }
+  })
+
+  const appInfoListItem = () => {
+    return (
+      <View style={styles.appInfoContainer}>
+        <View style={styles.appInfoIconContainer}>
+          <Image style={styles.appInfoIcon} source={require('../../assets/images/app_icon.png')} />
+        </View>
+        <View>
+          <Text style={styles.appInfoText}>Version {DeviceInfo.getVersion()}</Text>
+          <Text style={styles.appInfoSecondaryText}>Build {DeviceInfo.getBuildNumber()}</Text>
+          <Text style={styles.appInfoSlogan}>shaping campus life since 2016</Text>
+        </View>
+      </View>
+    )
+  }
+
+  async function instagramAction() {
+    let instagramURL = "https://instagr.am/cloud_dessau"
+
+    const supported = await Linking.canOpenURL(instagramURL)
+
+    if (supported) {
+      await Linking.openURL(instagramURL)
+    } else {
+      Alert.alert(linkOpenFailedMessage)
     }
   }
 
@@ -37,7 +111,7 @@ const AboutScreen = ({ navigation }) => {
     if (supported) {
       await Linking.openURL(openSourceURL)
     } else {
-      Alert.alert("The repository website could not be opened.")
+      Alert.alert(linkOpenFailedMessage)
     }
   }
 
@@ -45,6 +119,20 @@ const AboutScreen = ({ navigation }) => {
     {
       title: "",
       data: [
+        {
+          title: "",
+          customItem: appInfoListItem(),
+          id: "appInfoItem"
+        }
+      ]
+    },
+    {
+      title: "",
+      data: [
+        {
+          title: "Follow us on Instagram",
+          id: "instagramItem"
+        },  
         {
           title: "Send Feedback",
           id: "feedbackItem"
@@ -63,7 +151,9 @@ const AboutScreen = ({ navigation }) => {
   ]
 
   return (
-    <BasicSectionList sections={listSections} onItemSelected={id => onItemSelected(id)} />
+    <>
+      <BasicSectionList sections={listSections} onItemSelected={id => onItemSelected(id)} />
+    </>
   )
 }
 

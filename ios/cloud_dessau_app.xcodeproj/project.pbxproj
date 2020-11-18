@@ -25,6 +25,8 @@
 		E3D148FDDFF492F720278D1C /* libPods-cloud_dessau_app-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624658100723F1380D21688F /* libPods-cloud_dessau_app-tvOS.a */; };
 		5CE3B004FBA74817A4E0FEB2 /* status_closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A82333EF6B46C6BC95235D /* status_closed.png */; };
 		6C628D898C844C8F8781F94A /* status_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 24ACAE9CC3744C71BDC76E91 /* status_open.png */; };
+		E601385830C74F35A97265D2 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5797C8AF2C72463793675B50 /* app_icon.png */; };
+		FC99A49A3D4C434CAB1C84DA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003A13CFEAD46CD8C58C560 /* settings.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		F40C102803011D44F78D5905 /* libPods-cloud_dessau_app-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A82333EF6B46C6BC95235D /* status_closed.png */ = {isa = PBXFileReference; name = "status_closed.png"; path = "../assets/images/status_closed.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		24ACAE9CC3744C71BDC76E91 /* status_open.png */ = {isa = PBXFileReference; name = "status_open.png"; path = "../assets/images/status_open.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5797C8AF2C72463793675B50 /* app_icon.png */ = {isa = PBXFileReference; name = "app_icon.png"; path = "../assets/images/app_icon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2003A13CFEAD46CD8C58C560 /* settings.png */ = {isa = PBXFileReference; name = "settings.png"; path = "../assets/images/icons/settings.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,8 @@
 				4BB82AA7E0F542E69D47A6CE /* cloud_logo.png */,
 				83A82333EF6B46C6BC95235D /* status_closed.png */,
 				24ACAE9CC3744C71BDC76E91 /* status_open.png */,
+				5797C8AF2C72463793675B50 /* app_icon.png */,
+				2003A13CFEAD46CD8C58C560 /* settings.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -368,6 +374,8 @@
 				22C3F985DC0B4656B7578E20 /* cloud_logo.png in Resources */,
 				5CE3B004FBA74817A4E0FEB2 /* status_closed.png in Resources */,
 				6C628D898C844C8F8781F94A /* status_open.png in Resources */,
+				E601385830C74F35A97265D2 /* app_icon.png in Resources */,
+				FC99A49A3D4C434CAB1C84DA /* settings.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
