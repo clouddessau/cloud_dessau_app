@@ -165,7 +165,7 @@ const AboutScreen = ({ navigation }) => {
 
   return (
     <>
-      <BasicSectionList sections={listSections} onItemSelected={id => onItemSelected(id)} />
+      <BasicSectionList sections={listSections} onItemSelected={id => onItemSelected(id)} listFooterText="© Johannes Jakob" />
     </>
   )
 }
