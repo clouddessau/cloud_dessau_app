@@ -30,16 +30,8 @@ const SettingsScreen = ({ navigation }) => {
     }
   }
 
-  async function feedbackAction() {
-    let emailURL = `mailto:hi@johjakob.com?subject=[cloud]%20app%20(${Platform.OS === 'ios' ? 'iOS' : 'Android'})`
-
-    const supported = await Linking.canOpenURL(emailURL)
-
-    if (supported) {
-      await Linking.openURL(emailURL)
-    } else {
-      Alert.alert(`The URL ${emailURL} cannot be opened on this device.`)
-    }
+  const aboutAction = () => {
+    navigation.navigate('About')
   }
 
   const onItemSelected = (id) => {
@@ -47,8 +39,8 @@ const SettingsScreen = ({ navigation }) => {
       case "accountItem":
         accountAction()
         break
-      case "feedbackItem":
-        feedbackAction()
+      case "aboutItem":
+        aboutAction()
         break
       default:
         break
@@ -68,11 +60,11 @@ const SettingsScreen = ({ navigation }) => {
       ]
     },
     {
-      title: "About",
+      title: "",
       data: [
         {
-          title: "Send Feedback",
-          id: "feedbackItem"
+          title: "About",
+          id: "aboutItem"
         }
       ]
     }
