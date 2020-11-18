@@ -17,14 +17,14 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* cloud_dessau_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cloud_dessau_appTests.m */; };
 		530BD690CD0BA52DD6159F38 /* libPods-cloud_dessau_app-cloud_dessau_appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C17A56260C58C92160284534 /* libPods-cloud_dessau_app-cloud_dessau_appTests.a */; };
+		5CE3B004FBA74817A4E0FEB2 /* status_closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A82333EF6B46C6BC95235D /* status_closed.png */; };
 		621427064067F7B81E113549 /* libPods-cloud_dessau_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB7B46D9879E83B6BE5A962 /* libPods-cloud_dessau_app.a */; };
+		6C628D898C844C8F8781F94A /* status_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 24ACAE9CC3744C71BDC76E91 /* status_open.png */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C58A47C0295B4E6A22E32333 /* libPods-cloud_dessau_app-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C102803011D44F78D5905 /* libPods-cloud_dessau_app-tvOSTests.a */; };
 		CF892F73254AB332005FFD6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF892F72254AB332005FFD6A /* GoogleService-Info.plist */; };
 		CF892F74254AB332005FFD6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF892F72254AB332005FFD6A /* GoogleService-Info.plist */; };
 		E3D148FDDFF492F720278D1C /* libPods-cloud_dessau_app-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624658100723F1380D21688F /* libPods-cloud_dessau_app-tvOS.a */; };
-		5CE3B004FBA74817A4E0FEB2 /* status_closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A82333EF6B46C6BC95235D /* status_closed.png */; };
-		6C628D898C844C8F8781F94A /* status_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 24ACAE9CC3744C71BDC76E91 /* status_open.png */; };
 		E601385830C74F35A97265D2 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5797C8AF2C72463793675B50 /* app_icon.png */; };
 		FC99A49A3D4C434CAB1C84DA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003A13CFEAD46CD8C58C560 /* settings.png */; };
 /* End PBXBuildFile section */
@@ -58,6 +58,8 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = cloud_dessau_app/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = cloud_dessau_app/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cloud_dessau_app/main.m; sourceTree = "<group>"; };
+		2003A13CFEAD46CD8C58C560 /* settings.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = settings.png; path = ../assets/images/icons/settings.png; sourceTree = "<group>"; };
+		24ACAE9CC3744C71BDC76E91 /* status_open.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = status_open.png; path = ../assets/images/status_open.png; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* cloud_dessau_app-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cloud_dessau_app-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* cloud_dessau_app-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cloud_dessau_app-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35C203FD257B9035FF79D72F /* Pods-cloud_dessau_app-cloud_dessau_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloud_dessau_app-cloud_dessau_appTests.debug.xcconfig"; path = "Target Support Files/Pods-cloud_dessau_app-cloud_dessau_appTests/Pods-cloud_dessau_app-cloud_dessau_appTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,9 +67,11 @@
 		3DB7B46D9879E83B6BE5A962 /* libPods-cloud_dessau_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BB82AA7E0F542E69D47A6CE /* cloud_logo.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = cloud_logo.png; path = ../assets/images/cloud_logo.png; sourceTree = "<group>"; };
 		5191A4124CEF93BB627B40C2 /* Pods-cloud_dessau_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloud_dessau_app.debug.xcconfig"; path = "Target Support Files/Pods-cloud_dessau_app/Pods-cloud_dessau_app.debug.xcconfig"; sourceTree = "<group>"; };
+		5797C8AF2C72463793675B50 /* app_icon.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = app_icon.png; path = ../assets/images/app_icon.png; sourceTree = "<group>"; };
 		624658100723F1380D21688F /* libPods-cloud_dessau_app-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E9C1B4DFB69C28554695927 /* Pods-cloud_dessau_app-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloud_dessau_app-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-cloud_dessau_app-tvOS/Pods-cloud_dessau_app-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = cloud_dessau_app/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		83A82333EF6B46C6BC95235D /* status_closed.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = status_closed.png; path = ../assets/images/status_closed.png; sourceTree = "<group>"; };
 		B365FC31071DC58695919CC3 /* Pods-cloud_dessau_app-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloud_dessau_app-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-cloud_dessau_app-tvOSTests/Pods-cloud_dessau_app-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		C17A56260C58C92160284534 /* libPods-cloud_dessau_app-cloud_dessau_appTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app-cloud_dessau_appTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF892F72254AB332005FFD6A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -76,10 +80,6 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		F40C102803011D44F78D5905 /* libPods-cloud_dessau_app-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		83A82333EF6B46C6BC95235D /* status_closed.png */ = {isa = PBXFileReference; name = "status_closed.png"; path = "../assets/images/status_closed.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		24ACAE9CC3744C71BDC76E91 /* status_open.png */ = {isa = PBXFileReference; name = "status_open.png"; path = "../assets/images/status_open.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		5797C8AF2C72463793675B50 /* app_icon.png */ = {isa = PBXFileReference; name = "app_icon.png"; path = "../assets/images/app_icon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2003A13CFEAD46CD8C58C560 /* settings.png */ = {isa = PBXFileReference; name = "settings.png"; path = "../assets/images/icons/settings.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -704,7 +704,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TRLMQKJQ97;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = cloud_dessau_app/Info.plist;
@@ -728,7 +728,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = TRLMQKJQ97;
 				INFOPLIST_FILE = cloud_dessau_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
