@@ -128,14 +128,26 @@ const AboutScreen = ({ navigation }) => {
     },
     {
       title: "",
+      data: [ 
+        {
+          title: "Send Feedback",
+          leftIcon: "mail",
+          id: "feedbackItem"
+        }
+      ]
+    },
+    {
+      title: "Social",
       data: [
         {
           title: "Follow us on Instagram",
+          leftIcon: "instagram",
           id: "instagramItem"
-        },  
+        },
         {
-          title: "Send Feedback",
-          id: "feedbackItem"
+          title: "Join our Discord server",
+          leftIcon: "discord",
+          id: "discordItem"
         }
       ]
     },
@@ -144,6 +156,7 @@ const AboutScreen = ({ navigation }) => {
       data: [
         {
           title: "Open Source",
+          leftIcon: "externalLink",
           id: "openSourceItem"
         }
       ]
