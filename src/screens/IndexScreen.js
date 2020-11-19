@@ -64,11 +64,9 @@ const IndexScreen = ({ navigation }) => {
 
   const styles = StyleSheet.create({
     toolbarTop: {
-      alignItems: 'flex-end',
-    },
-
-    headerView: {
-      paddingBottom: 16,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center'
     },
 
     contentView: {
@@ -102,10 +100,8 @@ const IndexScreen = ({ navigation }) => {
   return (
     <BaseView background="backgroundGrouped">
       <View style={styles.toolbarTop}>
+        <LogoView width='35%' height={64} maxWidth={160} />
         <ToolbarButtonControl onPress={() => navigation.navigate('Settings')} icon="settings" />
-      </View>
-      <View style={styles.headerView}>
-        <LogoView width='35%' height={64} maxWidth={150} />
       </View>
       <View style={styles.contentView}>
         <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingHorizontal: themeProperties.container.padding, paddingVertical: themeProperties.container.padding * 2 }}>
