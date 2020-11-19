@@ -64,7 +64,7 @@ const IndexScreen = ({ navigation }) => {
 
   const styles = StyleSheet.create({
     toolbarTop: {
-      marginBottom: themeProperties.container.padding,
+      marginBottom: themeProperties.container.padding / 2,
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center'
