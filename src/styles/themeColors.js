@@ -6,6 +6,7 @@ const themeColors = {
     light: {
       text: '#000',
       textSecondary: 'rgba(0, 0, 0, .5)',
+      textTertiary: 'rgba(0, 0, 0, .3)',
 
       background: '#FFF',
       backgroundGrouped: '#F2F2F2',
@@ -18,6 +19,7 @@ const themeColors = {
     dark: {
       text: '#FFF',
       textSecondary: 'rgba(255, 255, 255, .6)',
+      textTertiary: 'rgba(255, 255, 255, .4)',
 
       background: '#1C1C1C',
       backgroundGrouped: '#000',
