@@ -83,7 +83,7 @@ const AboutScreen = ({ navigation }) => {
   }
 
   async function instagramAction() {
-    let instagramURL = "https://instagr.am/cloud_dessau"
+    let instagramURL = "https://instagram.com/cloud_dessau"
 
     const supported = await Linking.canOpenURL(instagramURL)
 
