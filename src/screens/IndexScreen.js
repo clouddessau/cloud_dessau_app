@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { View, ScrollView, StyleSheet } from 'react-native'
+import { View, ScrollView, Linking, Alert, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
 import { AuthContext } from '../AuthProvider'
 import BaseView from '../components/views/BaseView'
@@ -38,6 +38,30 @@ const IndexScreen = ({ navigation }) => {
       })
   }
 
+  async function instagramAction() {
+    let instagramURL = "https://instagr.am/cloud_dessau"
+
+    const supported = await Linking.canOpenURL(instagramURL)
+
+    if (supported) {
+      await Linking.openURL(instagramURL)
+    } else {
+      Alert.alert(linkOpenFailedMessage)
+    }
+  }
+
+  async function discordAction() {
+    let discordURL = "https://discord.gg/DjSgmyU"
+
+    const supported = await Linking.canOpenURL(discordURL)
+
+    if (supported) {
+      await Linking.openURL(discordURL)
+    } else {
+      Alert.alert(linkOpenFailedMessage)
+    }
+  }
+
   const styles = StyleSheet.create({
     toolbarTop: {
       alignItems: 'flex-end',
@@ -59,7 +83,18 @@ const IndexScreen = ({ navigation }) => {
       zIndex: 2
     },
 
+    socialLinksView: {
+      flexDirection: 'row',
+      justifyContent: 'flex-end',
+      alignItems: 'center'
+    },
+
+    spacer: {
+      width: themeProperties.container.padding
+    },
+
     toggleButtonView: {
+      marginTop: themeProperties.container.padding,
       zIndex: 1
     }
   })
@@ -76,6 +111,11 @@ const IndexScreen = ({ navigation }) => {
         <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingHorizontal: themeProperties.container.padding, paddingVertical: themeProperties.container.padding * 2 }}>
           <StatusView openStatus={openStatus} />
         </ScrollView>
+        <View style={styles.socialLinksView}>
+          <ToolbarButtonControl onPress={() => instagramAction()} icon="instagram" color="textTertiary" iconSize={themeProperties.icon.size * .8} />
+          <View style={styles.spacer} />
+          <ToolbarButtonControl onPress={() => discordAction()} icon="discord" color="textTertiary" />
+        </View>
         {user &&
           <View style={styles.toggleButtonView}>
             <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} color={openStatus ? "red" : "green"} />
