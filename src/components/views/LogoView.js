@@ -18,7 +18,8 @@ const LogoView = (props) => {
       tintColor: tint[scheme],
       resizeMode: 'contain',
       width: props.width,
-      height: props.height
+      height: props.height,
+      maxWidth: props.maxWidth
     }
   })
 
@@ -32,7 +33,8 @@ const LogoView = (props) => {
 
 LogoView.propTypes = {
   width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
-  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  maxWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 }
 
 LogoView.defaultProps = {

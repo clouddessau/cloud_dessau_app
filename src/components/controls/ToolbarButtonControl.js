@@ -21,8 +21,8 @@ const ToolbarButtonControl = (props) => {
     },
 
     icon: {
-      width: themeProperties.icon.size,
-      height: themeProperties.icon.size,
+      width: props.iconSize ? props.iconSize : themeProperties.icon.size,
+      height: props.iconSize ? props.iconSize : themeProperties.icon.size,
       tintColor: themeColors.colors[scheme][props.color]
     }
   })
@@ -41,8 +41,9 @@ const ToolbarButtonControl = (props) => {
 
 ToolbarButtonControl.propTypes = {
   text: PropTypes.string,
-  color: PropTypes.oneOf(['text', 'textSecondary', 'blue', 'green', 'red', 'yellow']),
-  icon: PropTypes.string
+  color: PropTypes.oneOf(['text', 'textSecondary', 'textTertiary', 'blue', 'green', 'red', 'yellow']),
+  icon: PropTypes.string,
+  iconSize: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 }
 
 ToolbarButtonControl.defaultProps = {
