@@ -50,6 +50,10 @@ const AboutScreen = ({ navigation }) => {
       height: 80
     },
 
+    appInfoTextContainer: {
+      flex: 1
+    },
+
     appInfoText: {
       marginBottom: 2,
       color: themeColors.colors[scheme].text,
@@ -73,7 +77,7 @@ const AboutScreen = ({ navigation }) => {
         <View style={styles.appInfoIconContainer}>
           <Image style={styles.appInfoIcon} source={require('../../assets/images/app_icon.png')} />
         </View>
-        <View>
+        <View style={styles.appInfoTextContainer}>
           <Text style={styles.appInfoText}>Version {DeviceInfo.getVersion()}</Text>
           <Text style={styles.appInfoSecondaryText}>Build {DeviceInfo.getBuildNumber()}</Text>
           <Text style={styles.appInfoSlogan}>shaping campus life since 2016</Text>

@@ -102,7 +102,7 @@ const IndexScreen = ({ navigation }) => {
     <BaseView background="backgroundGrouped">
       <View style={styles.toolbarTop}>
         <LogoView width='35%' height={64} maxWidth={160} />
-        <ToolbarButtonControl onPress={() => navigation.navigate('Settings')} icon="settings" />
+        <ToolbarButtonControl onPress={() => navigation.navigate('Settings')} icon="settings" color="text" />
       </View>
       <View style={styles.contentView}>
         <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingHorizontal: themeProperties.container.padding, paddingVertical: themeProperties.container.padding * 2 }}>
