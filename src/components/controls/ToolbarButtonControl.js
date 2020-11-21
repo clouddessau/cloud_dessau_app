@@ -47,7 +47,7 @@ ToolbarButtonControl.propTypes = {
 }
 
 ToolbarButtonControl.defaultProps = {
-  color: 'text'
+  color: 'blue'
 }
 
 export default ToolbarButtonControl
