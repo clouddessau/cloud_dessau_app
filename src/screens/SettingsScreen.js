@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import { Linking, Alert, Platform } from 'react-native'
 import { AuthContext } from '../AuthProvider'
 import { useActionSheet } from '@expo/react-native-action-sheet'
 import BasicSectionList from '../components/views/BasicSectionList'
