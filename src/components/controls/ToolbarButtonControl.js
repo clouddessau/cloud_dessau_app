@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { TouchableOpacity, Text, Image, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
-import themeProperties from '../../styles/themeProperties'
-import themeColors from '../../styles/themeColors'
+import theme from '../../styles/theme'
 import icons from '../../styles/icons'
 
 const ToolbarButtonControl = (props) => {
@@ -16,14 +15,14 @@ const ToolbarButtonControl = (props) => {
 
   const styles = StyleSheet.create({
     buttonText: {
-      color: themeColors.colors[scheme][props.color],
+      color: theme.common.colors[scheme][props.color],
       fontSize: 18
     },
 
     icon: {
-      width: props.iconSize ? props.iconSize : themeProperties.icon.size,
-      height: props.iconSize ? props.iconSize : themeProperties.icon.size,
-      tintColor: themeColors.colors[scheme][props.color]
+      width: props.iconSize ? props.iconSize : theme.icon.size,
+      height: props.iconSize ? props.iconSize : theme.icon.size,
+      tintColor: theme.common.colors[scheme][props.color]
     }
   })
 

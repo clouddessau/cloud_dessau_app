@@ -3,8 +3,7 @@ import { View, Text, Image, Linking, Alert, Platform, StyleSheet } from 'react-n
 import { useColorScheme } from 'react-native-appearance'
 import DeviceInfo from 'react-native-device-info'
 import BasicSectionList from '../components/views/BasicSectionList'
-import themeProperties from '../styles/themeProperties'
-import themeColors from '../styles/themeColors'
+import theme from '../styles/theme'
 
 const AboutScreen = ({ navigation }) => {
   const scheme = useColorScheme()
@@ -37,11 +36,11 @@ const AboutScreen = ({ navigation }) => {
     },
 
     appInfoIconContainer: {
-      marginRight: themeProperties.container.padding,
-      shadowColor: themeColors.colors.black,
-      shadowOffset: themeProperties.common.shadowOffset,
-      shadowOpacity: themeProperties.common.shadowOpacity,
-      shadowRadius: themeProperties.common.shadowRadius,
+      marginRight: theme.container.padding,
+      shadowColor: theme.common.colors.black,
+      shadowOffset: theme.common.shadowOffset,
+      shadowOpacity: theme.common.shadowOpacity,
+      shadowRadius: theme.common.shadowRadius,
       elevation: 10
     },
 
@@ -56,17 +55,17 @@ const AboutScreen = ({ navigation }) => {
 
     appInfoText: {
       marginBottom: 2,
-      color: themeColors.colors[scheme].text,
+      color: theme.common.colors[scheme].text,
       fontSize: 16,
       fontWeight: 'bold'
     },
 
     appInfoSecondaryText: {
-      color: themeColors.colors[scheme].textSecondary
+      color: theme.common.colors[scheme].textSecondary
     },
 
     appInfoSlogan: {
-      color: themeColors.colors[scheme].textSecondary,
+      color: theme.common.colors[scheme].textSecondary,
       marginTop: 8
     }
   })
