@@ -1,5 +1,5 @@
 import React, { useContext, useLayoutEffect, useEffect, useState } from 'react'
-import { View, Text, Button, Alert, StyleSheet, Platform } from 'react-native'
+import { View, Alert, StyleSheet, Platform } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { AuthContext } from '../AuthProvider'
 import SignInForm from '../components/auth/SignInForm'
