@@ -13,6 +13,10 @@ const icons = {
     src: require(`${prefix}info.png`)
   },
 
+  caution: {
+    src: require(`${prefix}caution.png`)
+  },
+
   externalLink: {
     src: require(`${prefix}external_link.png`)
   },
