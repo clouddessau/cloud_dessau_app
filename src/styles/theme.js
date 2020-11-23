@@ -88,7 +88,9 @@ const theme = {
         green: commonColors.light.green,
         blue: commonColors.light.blue,
 
-        disabled: '#CCCCCC'
+        disabled: '#CCCCCC',
+
+        none: '#00000000'
       },
       dark: {
         default: commonColors.dark.background,
@@ -98,7 +100,9 @@ const theme = {
         green: commonColors.dark.green,
         blue: commonColors.dark.blue,
 
-        disabled: '#333333'
+        disabled: '#333333',
+
+        none: '#00000000'
       },
 
       pressed: {
@@ -123,21 +127,29 @@ const theme = {
 
     text: {
       light: {
-        default: commonColors.light.text,
+        text: commonColors.light.text,
+        textSecondary: commonColors.light.textSecondary,
 
-        blue: commonColors.white,
-        green: commonColors.white,
-        red: commonColors.white,
-        yellow: commonColors.black,
+        black: commonColors.black,
+        white: commonColors.white,
+
+        red: commonColors.light.red,
+        yellow: commonColors.light.yellow,
+        green: commonColors.light.green,
+        blue: commonColors.light.blue,
         disabled: '#999'
       },
       dark: {
-        default: commonColors.dark.text,
+        text: commonColors.dark.text,
+        textSecondary: commonColors.dark.textSecondary,
 
-        blue: commonColors.white,
-        green: commonColors.white,
-        red: commonColors.white,
-        yellow: commonColors.black,
+        black: commonColors.black,
+        white: commonColors.white,
+
+        red: commonColors.dark.red,
+        yellow: commonColors.dark.yellow,
+        green: commonColors.dark.green,
+        blue: commonColors.dark.blue,
         disabled: '#888'
       }
     }

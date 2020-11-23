@@ -16,17 +16,17 @@ const ButtonControl = (props) => {
   const styles = StyleSheet.create({
     button: {
       padding: 14,
-      backgroundColor: theme.button.view[scheme][props.color],
+      backgroundColor: theme.button.view[scheme][props.backgroundColor],
       borderRadius: 10,
       alignItems: 'center'
     },
 
     buttonPressed: {
-      backgroundColor: theme.button.view.pressed[scheme][props.color]
+      backgroundColor: theme.button.view.pressed[scheme][props.backgroundColor]
     },
 
     buttonText: {
-      color: theme.button.text[scheme][props.color],
+      color: theme.button.text[scheme][props.textColor],
       fontSize: 20,
       fontWeight: '500'
     },
@@ -62,13 +62,15 @@ const ButtonControl = (props) => {
 
 ButtonControl.propTypes = {
   text: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['default', 'blue', 'green', 'red', 'yellow', 'none']),
+  backgroundColor: PropTypes.oneOf(['default', 'red', 'yellow', 'green', 'blue', 'none']),
+  textColor: PropTypes.oneOf(['text', 'textSecondary', 'black', 'white', 'red', 'yellow', 'green', 'blue']),
   disabled: PropTypes.bool
 }
 
 ButtonControl.defaultProps = {
   text: 'Button',
-  color: 'default',
+  backgroundColor: 'default',
+  textColor: 'text',
   disabled: false
 }
 
