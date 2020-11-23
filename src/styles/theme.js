@@ -1,49 +1,66 @@
+const commonColors = {
+  black: '#000',
+  white: '#fff',
+
+  light: {
+    text: '#000',
+    textSecondary: 'rgba(0, 0, 0, .5)',
+    textTertiary: 'rgba(0, 0, 0, .3)',
+
+    background: '#FFF',
+    backgroundGrouped: '#F2F2F2',
+
+    red: '#FF4000',
+    yellow: '#FFC94C',
+    green: '#52D411',
+    blue: '#006AFF'
+  },
+  dark: {
+    text: '#FFF',
+    textSecondary: 'rgba(255, 255, 255, .6)',
+    textTertiary: 'rgba(255, 255, 255, .4)',
+
+    background: '#1C1C1C',
+    backgroundGrouped: '#000',
+
+    red: '#FF470A',
+    yellow: '#FFC34C',
+    green: '#56DE12',
+    blue: '#1A79FF'
+  }
+}
+
 const theme = {
   common: {
     colors: {
-      black: '#000',
-      white: '#fff',
+      black: commonColors.black,
+      white: commonColors.white,
 
       light: {
-        text: '#000',
-        textSecondary: 'rgba(0, 0, 0, .5)',
-        textTertiary: 'rgba(0, 0, 0, .3)',
+        text: commonColors.light.text,
+        textSecondary: commonColors.light.textSecondary,
+        textTertiary: commonColors.light.textTertiary,
 
-        background: '#FFF',
-        backgroundGrouped: '#F2F2F2',
+        background: commonColors.light.background,
+        backgroundGrouped: commonColors.light.backgroundGrouped,
 
-        red: '#FF4000',
-        yellow: '#FFC94C',
-        green: '#52D411',
-        blue: '#006AFF'
+        red: commonColors.light.red,
+        yellow: commonColors.light.yellow,
+        green: commonColors.light.green,
+        blue: commonColors.light.blue
       },
       dark: {
-        text: '#FFF',
-        textSecondary: 'rgba(255, 255, 255, .6)',
-        textTertiary: 'rgba(255, 255, 255, .4)',
+        text: commonColors.dark.text,
+        textSecondary: commonColors.dark.textSecondary,
+        textTertiary: commonColors.dark.textTertiary,
 
-        background: '#1C1C1C',
-        backgroundGrouped: '#000',
+        background: commonColors.dark.background,
+        backgroundGrouped: commonColors.dark.backgroundGrouped,
 
-        red: '#FF470A',
-        yellow: '#FFC34C',
-        green: '#56DE12',
-        blue: '#1A79FF'
-      },
-      
-      active: {
-        light: {
-          red: '#E53900',
-          yellow: '#F4B625',
-          green: '#49BD0F',
-          blue: '#0661E0'
-        },
-        dark: {
-          red: '#D63600',
-          yellow: '#F4AF25',
-          green: '#4DC610',
-          blue: '#066BF9'
-        }
+        red: commonColors.dark.red,
+        yellow: commonColors.dark.yellow,
+        green: commonColors.dark.green,
+        blue: commonColors.dark.blue
       }
     },
 
@@ -64,26 +81,63 @@ const theme = {
   button: {
     view: {
       light: {
+        default: commonColors.light.background,
+
+        red: commonColors.light.red,
+        yellow: commonColors.light.yellow,
+        green: commonColors.light.green,
+        blue: commonColors.light.blue,
+
         disabled: '#CCCCCC'
       },
       dark: {
+        default: commonColors.dark.background,
+        
+        red: commonColors.dark.red,
+        yellow: commonColors.dark.yellow,
+        green: commonColors.dark.green,
+        blue: commonColors.dark.blue,
+
         disabled: '#333333'
+      },
+
+      pressed: {
+        light: {
+          default: 'rgba(0, 0, 0, .8)',
+
+          red: '#E53900',
+          yellow: '#F4B625',
+          green: '#49BD0F',
+          blue: '#0661E0'
+        },
+        dark: {
+          default: 'rgba(255, 255, 255, .8)',
+
+          red: '#D63600',
+          yellow: '#F4AF25',
+          green: '#4DC610',
+          blue: '#066BF9'
+        }
       }
     },
 
     text: {
       light: {
-        blue: '#FFF',
-        green: '#FFF',
-        red: '#FFF',
-        yellow: '#000',
+        default: commonColors.light.text,
+
+        blue: commonColors.white,
+        green: commonColors.white,
+        red: commonColors.white,
+        yellow: commonColors.black,
         disabled: '#999'
       },
       dark: {
-        blue: '#FFF',
-        green: '#FFF',
-        red: '#FFF',
-        yellow: '#000',
+        default: commonColors.dark.text,
+
+        blue: commonColors.white,
+        green: commonColors.white,
+        red: commonColors.white,
+        yellow: commonColors.black,
         disabled: '#888'
       }
     }

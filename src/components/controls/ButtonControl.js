@@ -16,13 +16,13 @@ const ButtonControl = (props) => {
   const styles = StyleSheet.create({
     button: {
       padding: 14,
-      backgroundColor: theme.common.colors[scheme][props.color],
+      backgroundColor: theme.button.view[scheme][props.color],
       borderRadius: 10,
       alignItems: 'center'
     },
 
     buttonPressed: {
-      backgroundColor: theme.common.colors.active[scheme][props.color]
+      backgroundColor: theme.button.view.pressed[scheme][props.color]
     },
 
     buttonText: {
@@ -62,13 +62,13 @@ const ButtonControl = (props) => {
 
 ButtonControl.propTypes = {
   text: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['gray', 'blue', 'green', 'red', 'yellow']),
+  color: PropTypes.oneOf(['default', 'blue', 'green', 'red', 'yellow', 'none']),
   disabled: PropTypes.bool
 }
 
 ButtonControl.defaultProps = {
   text: 'Button',
-  color: 'gray',
+  color: 'default',
   disabled: false
 }
 
