@@ -115,7 +115,7 @@ const IndexScreen = ({ navigation }) => {
         </View>
         {user &&
           <View style={styles.toggleButtonView}>
-            <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} color={openStatus ? "red" : "green"} />
+            <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} backgroundColor={openStatus ? "red" : "green"} textColor="white" />
           </View>
         }
       </View>
