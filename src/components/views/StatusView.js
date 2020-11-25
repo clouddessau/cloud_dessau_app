@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { View, Image, Text, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
-import themeColors from '../../styles/themeColors'
-import themeProperties from '../../styles/themeProperties'
+import theme from '../../styles/theme'
 
 const StatusView = (props) => {
   const scheme = useColorScheme()
@@ -13,29 +12,29 @@ const StatusView = (props) => {
 
   const styles = StyleSheet.create({
     container: {
-      marginTop: themeProperties.container.padding,
-      padding: themeProperties.container.padding * 1.5,
-      backgroundColor: themeColors.colors[scheme].background,
-      borderRadius: themeProperties.common.borderRadius * 2,
-      shadowColor: themeColors.colors.black,
-      shadowOffset: themeProperties.common.shadowOffsetLarge,
-      shadowOpacity: themeProperties.common.shadowOpacity,
-      shadowRadius: themeProperties.common.shadowRadiusLarge,
+      marginTop: theme.container.padding,
+      padding: theme.container.padding * 1.5,
+      backgroundColor: theme.common.colors[scheme].background,
+      borderRadius: theme.common.borderRadius * 2,
+      shadowColor: theme.common.colors.black,
+      shadowOffset: theme.common.shadowOffsetLarge,
+      shadowOpacity: theme.common.shadowOpacity,
+      shadowRadius: theme.common.shadowRadiusLarge,
       elevation: 10
     },
 
     image: {
-      marginBottom: themeProperties.container.padding * 1.5,
+      marginBottom: theme.container.padding * 1.5,
       width: '90%',
       height: 160,
-      tintColor: themeColors.colors[scheme].text,
+      tintColor: theme.common.colors[scheme].text,
       resizeMode: 'contain',
       alignSelf: 'center'
     },
 
     textView: {
-      paddingTop: themeProperties.container.padding * 1.5,
-      borderTopColor: themeColors.list.separator[scheme].background,
+      paddingTop: theme.container.padding * 1.5,
+      borderTopColor: theme.list.separator[scheme].background,
       borderTopWidth: 1
     },
 
@@ -46,11 +45,11 @@ const StatusView = (props) => {
     },
 
     openText: {
-      color: themeColors.colors[scheme].green
+      color: theme.common.colors[scheme].green
     },
 
     closedText: {
-      color: themeColors.colors[scheme].red
+      color: theme.common.colors[scheme].red
     }
   })
 

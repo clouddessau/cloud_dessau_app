@@ -3,16 +3,15 @@ import PropTypes from 'prop-types'
 import { StyleSheet } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useColorScheme } from 'react-native-appearance'
-import themeProperties from '../../styles/themeProperties'
-import themeColors from '../../styles/themeColors'
+import theme from '../../styles/theme'
 
 const BaseView = (props) => {
   const scheme = useColorScheme()
 
   const styles = StyleSheet.create({
     view: {
-      padding: themeProperties.container.padding,
-      backgroundColor: themeColors.colors[scheme][props.background],
+      padding: theme.container.padding,
+      backgroundColor: theme.common.colors[scheme][props.background],
       flex: 1
     }
   })

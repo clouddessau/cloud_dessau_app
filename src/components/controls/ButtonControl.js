@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Pressable, Text, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
-import themeColors from '../../styles/themeColors'
+import theme from '../../styles/theme'
 
 const ButtonControl = (props) => {
   const onPress = (e) => {
@@ -16,27 +16,27 @@ const ButtonControl = (props) => {
   const styles = StyleSheet.create({
     button: {
       padding: 14,
-      backgroundColor: themeColors.colors[scheme][props.color],
+      backgroundColor: theme.button.view[scheme][props.backgroundColor],
       borderRadius: 10,
       alignItems: 'center'
     },
 
     buttonPressed: {
-      backgroundColor: themeColors.colors.active[scheme][props.color]
+      backgroundColor: theme.button.view.pressed[scheme][props.backgroundColor]
     },
 
     buttonText: {
-      color: themeColors.buttonText[scheme][props.color],
+      color: theme.button.text[scheme][props.textColor],
       fontSize: 20,
       fontWeight: '500'
     },
 
     disabledButton: {
-      backgroundColor: themeColors.button[scheme].disabled
+      backgroundColor: theme.button.view[scheme].disabled
     },
 
     disabledButtonText: {
-      color: themeColors.buttonText[scheme].disabled
+      color: theme.button.text[scheme].disabled
     }
   })
 
@@ -62,13 +62,15 @@ const ButtonControl = (props) => {
 
 ButtonControl.propTypes = {
   text: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(['gray', 'blue', 'green', 'red', 'yellow']),
+  backgroundColor: PropTypes.oneOf(['default', 'red', 'yellow', 'green', 'blue', 'none']),
+  textColor: PropTypes.oneOf(['text', 'textSecondary', 'black', 'white', 'red', 'yellow', 'green', 'blue']),
   disabled: PropTypes.bool
 }
 
 ButtonControl.defaultProps = {
   text: 'Button',
-  color: 'gray',
+  backgroundColor: 'default',
+  textColor: 'text',
   disabled: false
 }
 

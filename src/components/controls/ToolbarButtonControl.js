@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { TouchableOpacity, Text, Image, StyleSheet } from 'react-native'
+import { TouchableOpacity, View, Text, Image, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
-import themeProperties from '../../styles/themeProperties'
-import themeColors from '../../styles/themeColors'
+import theme from '../../styles/theme'
 import icons from '../../styles/icons'
 
 const ToolbarButtonControl = (props) => {
@@ -15,25 +14,38 @@ const ToolbarButtonControl = (props) => {
   const scheme = useColorScheme()
 
   const styles = StyleSheet.create({
+    button: {
+      flexDirection: 'row',
+      alignItems: 'center'
+    },
+
     buttonText: {
-      color: themeColors.colors[scheme][props.color],
+      color: theme.common.colors[scheme][props.color],
       fontSize: 18
     },
 
     icon: {
-      width: props.iconSize ? props.iconSize : themeProperties.icon.size,
-      height: props.iconSize ? props.iconSize : themeProperties.icon.size,
-      tintColor: themeColors.colors[scheme][props.color]
+      width: props.iconSize ? props.iconSize : theme.icon.size,
+      height: props.iconSize ? props.iconSize : theme.icon.size,
+      tintColor: theme.common.colors[scheme][props.color]
+    },
+
+    spacer: {
+      width: theme.container.padding / 2,
+      height: theme.container.padding / 2
     }
   })
 
   return (
     <TouchableOpacity style={styles.button} onPress={e => onPress(e)} activeOpacity={.5}>
-      {props.text &&
-        <Text style={styles.buttonText}>{props.text}</Text>
-      }
       {props.icon &&
         <Image style={styles.icon} source={icons[props.icon].src} />
+      }
+      {props.icon && props.text &&
+        <View style={styles.spacer} />
+      }
+      {props.text &&
+        <Text style={styles.buttonText}>{props.text}</Text>
       }
     </TouchableOpacity>
   )

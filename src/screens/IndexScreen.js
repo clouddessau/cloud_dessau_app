@@ -8,7 +8,7 @@ import StatusView from '../components/views/StatusView'
 import ButtonControl from '../components/controls/ButtonControl'
 import ToolbarButtonControl from '../components/controls/ToolbarButtonControl'
 import firestore from '@react-native-firebase/firestore'
-import themeProperties from '../styles/themeProperties'
+import theme from '../styles/theme'
 
 const IndexScreen = ({ navigation }) => {
   const { user } = useContext(AuthContext)
@@ -64,7 +64,7 @@ const IndexScreen = ({ navigation }) => {
 
   const styles = StyleSheet.create({
     toolbarTop: {
-      marginBottom: themeProperties.container.padding / 2,
+      marginBottom: theme.container.padding / 2,
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center'
@@ -76,8 +76,8 @@ const IndexScreen = ({ navigation }) => {
     },
 
     scrollView: {
-      marginTop: themeProperties.container.padding * -2,
-      marginHorizontal: themeProperties.container.padding * -1,
+      marginTop: theme.container.padding * -2,
+      marginHorizontal: theme.container.padding * -1,
       overflow: 'visible',
       zIndex: 2
     },
@@ -89,11 +89,12 @@ const IndexScreen = ({ navigation }) => {
     },
 
     spacer: {
-      width: themeProperties.container.padding
+      width: theme.container.padding,
+      height: theme.container.padding
     },
 
     toggleButtonView: {
-      marginTop: themeProperties.container.padding,
+      marginTop: theme.container.padding,
       zIndex: 1
     }
   })
@@ -105,17 +106,21 @@ const IndexScreen = ({ navigation }) => {
         <ToolbarButtonControl onPress={() => navigation.navigate('Settings')} icon="settings" color="text" />
       </View>
       <View style={styles.contentView}>
-        <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingHorizontal: themeProperties.container.padding, paddingVertical: themeProperties.container.padding * 2 }}>
+        <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingHorizontal: theme.container.padding, paddingVertical: theme.container.padding * 2 }}>
           <StatusView openStatus={openStatus} />
+          <View style={styles.spacer} />
+          <View style={{ alignItems: 'center' }}>
+            <ToolbarButtonControl onPress={() => navigation.navigate('SafetyMeasures')} icon="caution" iconSize={theme.icon.size * .8} text="Safety Measures" color="textSecondary" />
+          </View>
         </ScrollView>
         <View style={styles.socialLinksView}>
-          <ToolbarButtonControl onPress={() => instagramAction()} icon="instagram" color="textTertiary" iconSize={themeProperties.icon.size * .8} />
+          <ToolbarButtonControl onPress={() => instagramAction()} icon="instagram" color="textTertiary" iconSize={theme.icon.size * .8} />
           <View style={styles.spacer} />
           <ToolbarButtonControl onPress={() => discordAction()} icon="discord" color="textTertiary" />
         </View>
         {user &&
           <View style={styles.toggleButtonView}>
-            <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} color={openStatus ? "red" : "green"} />
+            <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} backgroundColor={openStatus ? "red" : "green"} textColor="white" />
           </View>
         }
       </View>

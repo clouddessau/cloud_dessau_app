@@ -3,8 +3,7 @@ import PropTypes from 'prop-types'
 import { SectionList, Text, View, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
 import BasicSectionListItem from './BasicSectionListItem'
-import themeProperties from '../../styles/themeProperties'
-import themeColors from '../../styles/themeColors'
+import theme from '../../styles/theme'
 
 const BasicSectionList = (props) => {
   const scheme = useColorScheme()
@@ -16,34 +15,34 @@ const BasicSectionList = (props) => {
 
   const styles = StyleSheet.create({
     list: {
-      padding: themeProperties.container.padding,
+      padding: theme.container.padding,
       paddingTop: 0
     },
 
     header: {
-      paddingHorizontal: themeProperties.container.padding,
-      paddingTop: themeProperties.container.padding,
-      paddingBottom: themeProperties.container.padding / 2,
-      color: themeColors.colors[scheme].textSecondary,
+      paddingHorizontal: theme.container.padding,
+      paddingTop: theme.container.padding,
+      paddingBottom: theme.container.padding / 2,
+      color: theme.common.colors[scheme].textSecondary,
       fontSize: 16,
       fontWeight: '500',
       textTransform: 'uppercase',
     },
 
     listFooter: {
-      marginTop: themeProperties.container.padding / 2,
-      marginHorizontal: themeProperties.container.padding,
-      color: themeColors.colors[scheme].textSecondary
+      marginTop: theme.container.padding / 2,
+      marginHorizontal: theme.container.padding,
+      color: theme.common.colors[scheme].textSecondary
     },
 
     separatorContainer: {
-      backgroundColor: themeColors.list.item[scheme].background
+      backgroundColor: theme.list.item[scheme].background
     },
     
     separator: {
-      marginLeft: themeProperties.container.padding,
+      marginLeft: theme.container.padding,
       height: 1,
-      backgroundColor: themeColors.list.separator[scheme].background
+      backgroundColor: theme.list.separator[scheme].background
     }
   })
 

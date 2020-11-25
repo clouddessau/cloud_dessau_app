@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Pressable, Text, Image, StyleSheet } from 'react-native'
 import { useColorScheme } from 'react-native-appearance'
-import themeProperties from '../../styles/themeProperties'
-import themeColors from '../../styles/themeColors'
+import theme from '../../styles/theme'
 import icons from '../../styles/icons'
 
 const BasicSectionListItem = (props) => {
@@ -19,23 +18,23 @@ const BasicSectionListItem = (props) => {
 
   const styles = StyleSheet.create({
     item: {
-      padding: themeProperties.container.padding,
-      backgroundColor: themeColors.list.item[scheme].background,
+      padding: theme.container.padding,
+      backgroundColor: theme.list.item[scheme].background,
       flexDirection: 'row',
       alignItems: 'center',
-      borderTopLeftRadius: props.index === 0 ? themeProperties.common.borderRadius : 0,
-      borderTopRightRadius: props.index === 0 ? themeProperties.common.borderRadius : 0,
-      borderBottomLeftRadius: props.index === numberOfItemsInSection ? themeProperties.common.borderRadius : 0,
-      borderBottomRightRadius: props.index === numberOfItemsInSection ? themeProperties.common.borderRadius : 0,
+      borderTopLeftRadius: props.index === 0 ? theme.common.borderRadius : 0,
+      borderTopRightRadius: props.index === 0 ? theme.common.borderRadius : 0,
+      borderBottomLeftRadius: props.index === numberOfItemsInSection ? theme.common.borderRadius : 0,
+      borderBottomRightRadius: props.index === numberOfItemsInSection ? theme.common.borderRadius : 0,
     },
 
     selectedItem: {
-      backgroundColor: themeColors.list.item[scheme].backgroundSelected
+      backgroundColor: theme.list.item[scheme].backgroundSelected
     },
 
     title: {
-      color: themeColors.colors[scheme].text,
-      fontSize: themeProperties.list.fontSize,
+      color: theme.common.colors[scheme].text,
+      fontSize: theme.list.item.fontSize,
       flex: 1
     },
 
@@ -44,14 +43,14 @@ const BasicSectionListItem = (props) => {
     },
 
     subtitle: {
-      color: props.subtitleColor === "default" ? themeColors.colors[scheme].textSecondary : themeColors.colors[scheme][props.subtitleColor],
-      fontSize: themeProperties.list.fontSize
+      color: props.subtitleColor === "default" ? theme.common.colors[scheme].textSecondary : theme.common.colors[scheme][props.subtitleColor],
+      fontSize: theme.list.item.fontSize
     },
 
     icon: {
-      width: themeProperties.list.iconSize,
-      height: themeProperties.list.iconSize,
-      tintColor: themeColors.colors[scheme][props.iconColor]
+      width: theme.list.item.iconSize,
+      height: theme.list.item.iconSize,
+      tintColor: theme.common.colors[scheme][props.iconColor]
     }
   })
 

@@ -11,6 +11,7 @@ import IndexScreen from './screens/IndexScreen'
 import SettingsScreen from './screens/SettingsScreen'
 import SignInScreen from './screens/SignInScreen'
 import AboutScreen from './screens/AboutScreen'
+import SafetyMeasuresScreen from './screens/SafetyMeasuresScreen'
 
 enableScreens()
 
@@ -50,6 +51,7 @@ const Routes = () => {
         <RootStack.Screen options={{ headerLargeTitle: true, headerBackTitle: "Back" }} name="Settings" component={SettingsScreen} />
         <RootStack.Screen options={{ headerShown: false, stackPresentation: "formSheet" }} name="SignIn" component={SignInStackNavigator} />
         <RootStack.Screen options={{ headerLargeTitle: true }} name="About" component={AboutScreen} />
+        <RootStack.Screen options={{ headerLargeTitle: true, headerTitle: "Safety Measures" }} name="SafetyMeasures" component={SafetyMeasuresScreen} />
       </RootStack.Navigator>
     </NavigationContainer>
   )
