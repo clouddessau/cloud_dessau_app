@@ -34,6 +34,7 @@
 		E3D148FDDFF492F720278D1C /* libPods-cloud_dessau_app-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624658100723F1380D21688F /* libPods-cloud_dessau_app-tvOS.a */; };
 		E601385830C74F35A97265D2 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5797C8AF2C72463793675B50 /* app_icon.png */; };
 		FC99A49A3D4C434CAB1C84DA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003A13CFEAD46CD8C58C560 /* settings.png */; };
+		765E2DFC18D5424CAD381ACC /* caution.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B8CF571FAD4F4B8978D933 /* caution.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		F40C102803011D44F78D5905 /* libPods-cloud_dessau_app-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F472F46D728F41CEA16C2934 /* instagram.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = instagram.png; path = ../assets/images/icons/instagram.png; sourceTree = "<group>"; };
 		FCF80089E4D94986BE37D584 /* info.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = info.png; path = ../assets/images/icons/info.png; sourceTree = "<group>"; };
+		88B8CF571FAD4F4B8978D933 /* caution.png */ = {isa = PBXFileReference; name = "caution.png"; path = "../assets/images/icons/caution.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				F472F46D728F41CEA16C2934 /* instagram.png */,
 				9BA004A977B049F9808CBDC4 /* mail.png */,
 				00BC6CE7A4DB43E99339F1EC /* user.png */,
+				88B8CF571FAD4F4B8978D933 /* caution.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 				81166573B2BB4B478C3F3E85 /* instagram.png in Resources */,
 				45CC0CBD387B402DBA7E478E /* mail.png in Resources */,
 				C8BC19E5372F417AAEC48C8D /* user.png in Resources */,
+				765E2DFC18D5424CAD381ACC /* caution.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
