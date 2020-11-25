@@ -89,7 +89,8 @@ const IndexScreen = ({ navigation }) => {
     },
 
     spacer: {
-      width: theme.container.padding
+      width: theme.container.padding,
+      height: theme.container.padding
     },
 
     toggleButtonView: {
@@ -107,6 +108,10 @@ const IndexScreen = ({ navigation }) => {
       <View style={styles.contentView}>
         <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingHorizontal: theme.container.padding, paddingVertical: theme.container.padding * 2 }}>
           <StatusView openStatus={openStatus} />
+          <View style={styles.spacer} />
+          <View style={{ alignItems: 'center' }}>
+            <ToolbarButtonControl onPress={() => navigation.navigate('SafetyMeasures')} icon="caution" iconSize={theme.icon.size * .8} text="Safety Measures" color="textSecondary" />
+          </View>
         </ScrollView>
         <View style={styles.socialLinksView}>
           <ToolbarButtonControl onPress={() => instagramAction()} icon="instagram" color="textTertiary" iconSize={theme.icon.size * .8} />
