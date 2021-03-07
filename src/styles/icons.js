@@ -21,6 +21,14 @@ const icons = {
     src: require(`${prefix}external_link.png`)
   },
 
+  doorClosed: {
+    src: require(`${prefix}door_closed.png`)
+  },
+
+  doorOpen: {
+    src: require(`${prefix}door_open.png`)
+  },
+
   disclosureIndicator: {
     src: require(`${prefix}disclosure_indicator.png`)
   },
