@@ -102,7 +102,7 @@ const SignInForm = (props) => {
           style={styles.input}
         />
       </View>
-      <ButtonControl onPress={() => onSubmit()} text="Sign in" color="blue" disabled={props.usernameValue.length === 0 || props.passwordValue.length === 0} />
+      <ButtonControl onPress={() => onSubmit()} text="Sign in" textColor="white" backgroundColor="blue" disabled={props.usernameValue.length === 0 || props.passwordValue.length === 0} />
     </View>
   )
 }
