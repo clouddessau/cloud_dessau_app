@@ -20,7 +20,7 @@ const StatusView = (props) => {
       shadowOffset: theme.common.shadowOffsetLarge,
       shadowOpacity: theme.common.shadowOpacity,
       shadowRadius: theme.common.shadowRadiusLarge,
-      elevation: 10
+      elevation: theme.common.elevationLarge
     },
 
     image: {
