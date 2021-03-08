@@ -71,7 +71,9 @@ const theme = {
     shadowOffsetLarge: {width: 0, height: 10},
     shadowOpacity: .2,
     shadowRadius: 10,
-    shadowRadiusLarge: 20
+    shadowRadiusLarge: 20,
+    elevation: 5,
+    elevationLarge: 10
   },
 
   container: {
@@ -107,7 +109,7 @@ const theme = {
 
       pressed: {
         light: {
-          default: 'rgba(0, 0, 0, .8)',
+          default: 'rgb(235, 235, 235)',
 
           red: '#E53900',
           yellow: '#F4B625',
@@ -115,14 +117,16 @@ const theme = {
           blue: '#0661E0'
         },
         dark: {
-          default: 'rgba(255, 255, 255, .8)',
+          default: 'rgb(20, 20, 20)',
 
           red: '#D63600',
           yellow: '#F4AF25',
           green: '#4DC610',
           blue: '#066BF9'
         }
-      }
+      },
+
+      padding: 14
     },
 
     text: {
@@ -152,7 +156,9 @@ const theme = {
         blue: commonColors.dark.blue,
         disabled: '#888'
       }
-    }
+    },
+
+    size: 20
   },
 
   list: {
