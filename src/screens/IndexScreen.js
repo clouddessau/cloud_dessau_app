@@ -82,9 +82,14 @@ const IndexScreen = ({ navigation }) => {
       zIndex: 2
     },
 
+    bottomView: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center'
+    },
+
     socialLinksView: {
       flexDirection: 'row',
-      justifyContent: 'flex-end',
       alignItems: 'center'
     },
 
@@ -94,7 +99,6 @@ const IndexScreen = ({ navigation }) => {
     },
 
     toggleButtonView: {
-      marginTop: theme.container.padding,
       zIndex: 1
     }
   })
@@ -109,16 +113,18 @@ const IndexScreen = ({ navigation }) => {
         <ScrollView style={styles.scrollView} contentContainerStyle={{ paddingHorizontal: theme.container.padding, paddingVertical: theme.container.padding * 2 }}>
           <StatusView openStatus={openStatus} />
         </ScrollView>
-        <View style={styles.socialLinksView}>
-          <ToolbarButtonControl onPress={() => instagramAction()} icon="instagram" color="textTertiary" iconSize={theme.icon.size * .8} />
-          <View style={styles.spacer} />
-          <ToolbarButtonControl onPress={() => discordAction()} icon="discord" color="textTertiary" />
-        </View>
-        {user &&
-          <View style={styles.toggleButtonView}>
-            <ButtonControl onPress={() => toggleOpenStatus()} text={openStatus ? "Close [cloud]" : "Open [cloud]"} backgroundColor={openStatus ? "red" : "green"} textColor="white" />
+        <View style={styles.bottomView}>
+          {user &&
+            <View style={styles.toggleButtonView}>
+              <ButtonControl onPress={() => toggleOpenStatus()} icon={openStatus ? "doorClosed" : "doorOpen"} backgroundColor="default" iconColor={openStatus ? "red" : "green"} iconSize={40} rounded={true} shadow={true} />
+            </View>
+          }
+          <View style={styles.socialLinksView}>
+            <ToolbarButtonControl onPress={() => instagramAction()} icon="instagram" color="textTertiary" iconSize={theme.icon.size * .8} />
+            <View style={styles.spacer} />
+            <ToolbarButtonControl onPress={() => discordAction()} icon="discord" color="textTertiary" />
           </View>
-        }
+        </View>
       </View>
     </BaseView>
   )
