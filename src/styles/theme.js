@@ -155,10 +155,10 @@ const theme = {
         green: commonColors.dark.green,
         blue: commonColors.dark.blue,
         disabled: '#888'
-      }
-    },
+      },
 
-    size: 20
+      size: 18
+    },
   },
 
   list: {

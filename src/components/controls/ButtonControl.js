@@ -38,7 +38,7 @@ const ButtonControl = (props) => {
 
     buttonText: {
       color: theme.button.text[scheme][props.textColor],
-      fontSize: props.textSize,
+      fontSize: props.textSize ? props.textSize : theme.button.text.size,
       fontWeight: '500'
     },
 
@@ -107,7 +107,6 @@ ButtonControl.propTypes = {
 ButtonControl.defaultProps = {
   backgroundColor: 'default',
   textColor: 'text',
-  textSize: theme.button.text.size,
   iconColor: 'black',
   iconSize: theme.icon.size,
   rounded: false,
