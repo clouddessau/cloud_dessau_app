@@ -89,7 +89,9 @@ const IndexScreen = ({ navigation }) => {
     },
 
     socialLinksView: {
+      flex: 1,
       flexDirection: 'row',
+      justifyContent: 'flex-end',
       alignItems: 'center'
     },
 
