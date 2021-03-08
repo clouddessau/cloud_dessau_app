@@ -85,7 +85,7 @@ const IndexScreen = ({ navigation }) => {
     bottomView: {
       flexDirection: 'row',
       justifyContent: 'space-between',
-      alignItems: 'center'
+      alignItems: 'flex-end'
     },
 
     socialLinksView: {
