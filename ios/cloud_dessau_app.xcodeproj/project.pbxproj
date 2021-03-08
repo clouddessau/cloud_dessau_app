@@ -18,6 +18,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* cloud_dessau_appTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cloud_dessau_appTests.m */; };
 		45CC0CBD387B402DBA7E478E /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 9BA004A977B049F9808CBDC4 /* mail.png */; };
 		502735741BD542ED8942F118 /* disclosure_indicator.png in Resources */ = {isa = PBXBuildFile; fileRef = E2CD7FEE243E4A3D9AA46CB5 /* disclosure_indicator.png */; };
+		51CA1FDFA062458CA1DFE97E /* door_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB3BE2521E841DC82459ABD /* door_open.png */; };
 		530BD690CD0BA52DD6159F38 /* libPods-cloud_dessau_app-cloud_dessau_appTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C17A56260C58C92160284534 /* libPods-cloud_dessau_app-cloud_dessau_appTests.a */; };
 		5CE3B004FBA74817A4E0FEB2 /* status_closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A82333EF6B46C6BC95235D /* status_closed.png */; };
 		621427064067F7B81E113549 /* libPods-cloud_dessau_app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB7B46D9879E83B6BE5A962 /* libPods-cloud_dessau_app.a */; };
@@ -27,6 +28,7 @@
 		81166573B2BB4B478C3F3E85 /* instagram.png in Resources */ = {isa = PBXBuildFile; fileRef = F472F46D728F41CEA16C2934 /* instagram.png */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		A14441D3B5F24A739892CEC7 /* external_link.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB86FE127BB4F138ACC3CC6 /* external_link.png */; };
+		BBA07A9BB1D74D33981DBB49 /* door_closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 339D0DA61BCD40E5ACF57457 /* door_closed.png */; };
 		C58A47C0295B4E6A22E32333 /* libPods-cloud_dessau_app-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F40C102803011D44F78D5905 /* libPods-cloud_dessau_app-tvOSTests.a */; };
 		C8BC19E5372F417AAEC48C8D /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 00BC6CE7A4DB43E99339F1EC /* user.png */; };
 		CF892F73254AB332005FFD6A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF892F72254AB332005FFD6A /* GoogleService-Info.plist */; };
@@ -35,8 +37,6 @@
 		E3D148FDDFF492F720278D1C /* libPods-cloud_dessau_app-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 624658100723F1380D21688F /* libPods-cloud_dessau_app-tvOS.a */; };
 		E601385830C74F35A97265D2 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5797C8AF2C72463793675B50 /* app_icon.png */; };
 		FC99A49A3D4C434CAB1C84DA /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 2003A13CFEAD46CD8C58C560 /* settings.png */; };
-		BBA07A9BB1D74D33981DBB49 /* door_closed.png in Resources */ = {isa = PBXBuildFile; fileRef = 339D0DA61BCD40E5ACF57457 /* door_closed.png */; };
-		51CA1FDFA062458CA1DFE97E /* door_open.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BB3BE2521E841DC82459ABD /* door_open.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +71,10 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cloud_dessau_app/main.m; sourceTree = "<group>"; };
 		2003A13CFEAD46CD8C58C560 /* settings.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = settings.png; path = ../assets/images/icons/settings.png; sourceTree = "<group>"; };
 		24ACAE9CC3744C71BDC76E91 /* status_open.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = status_open.png; path = ../assets/images/status_open.png; sourceTree = "<group>"; };
+		2BB3BE2521E841DC82459ABD /* door_open.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = door_open.png; path = ../assets/images/icons/door_open.png; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* cloud_dessau_app-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cloud_dessau_app-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* cloud_dessau_app-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cloud_dessau_app-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		339D0DA61BCD40E5ACF57457 /* door_closed.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = door_closed.png; path = ../assets/images/icons/door_closed.png; sourceTree = "<group>"; };
 		35C203FD257B9035FF79D72F /* Pods-cloud_dessau_app-cloud_dessau_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloud_dessau_app-cloud_dessau_appTests.debug.xcconfig"; path = "Target Support Files/Pods-cloud_dessau_app-cloud_dessau_appTests/Pods-cloud_dessau_app-cloud_dessau_appTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3B893129565F1A6E73223DF3 /* Pods-cloud_dessau_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cloud_dessau_app.release.xcconfig"; path = "Target Support Files/Pods-cloud_dessau_app/Pods-cloud_dessau_app.release.xcconfig"; sourceTree = "<group>"; };
 		3DB7B46D9879E83B6BE5A962 /* libPods-cloud_dessau_app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,8 +101,6 @@
 		F40C102803011D44F78D5905 /* libPods-cloud_dessau_app-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cloud_dessau_app-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F472F46D728F41CEA16C2934 /* instagram.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = instagram.png; path = ../assets/images/icons/instagram.png; sourceTree = "<group>"; };
 		FCF80089E4D94986BE37D584 /* info.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = info.png; path = ../assets/images/icons/info.png; sourceTree = "<group>"; };
-		339D0DA61BCD40E5ACF57457 /* door_closed.png */ = {isa = PBXFileReference; name = "door_closed.png"; path = "../assets/images/icons/door_closed.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2BB3BE2521E841DC82459ABD /* door_open.png */ = {isa = PBXFileReference; name = "door_open.png"; path = "../assets/images/icons/door_open.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -747,7 +747,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = cloud_dessau_app/cloud_dessau_app.entitlements;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = TRLMQKJQ97;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = cloud_dessau_app/Info.plist;
@@ -773,7 +773,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = cloud_dessau_app/cloud_dessau_app.entitlements;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = TRLMQKJQ97;
 				INFOPLIST_FILE = cloud_dessau_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
