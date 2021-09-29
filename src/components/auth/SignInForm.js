@@ -1,33 +1,32 @@
-import React, { useRef } from 'react'
-import PropTypes from 'prop-types'
-import { View, Text, TextInput, StyleSheet } from 'react-native'
-import { useTheme } from '@react-navigation/native'
-import { useColorScheme } from 'react-native-appearance'
-import ButtonControl from '../controls/ButtonControl'
-import theme from '../../styles/theme'
+import React, {useRef} from 'react';
+import PropTypes from 'prop-types';
+import {View, Text, TextInput, StyleSheet, useColorScheme} from 'react-native';
+import {useTheme} from '@react-navigation/native';
+import ButtonControl from '../controls/ButtonControl';
+import theme from '../../styles/theme';
 
-const SignInForm = (props) => {
-  const onUsernameEdited = (text) => {
-    props.onUsernameEdited(text)
-  }
+const SignInForm = props => {
+  const onUsernameEdited = text => {
+    props.onUsernameEdited(text);
+  };
 
-  const onPasswordEdited = (text) => {
-    props.onPasswordEdited(text)
-  }
+  const onPasswordEdited = text => {
+    props.onPasswordEdited(text);
+  };
 
   const onSubmit = () => {
-    props.onSubmit()
-  }
+    props.onSubmit();
+  };
 
-  const scheme = useColorScheme()
-  const { colors } = useTheme()
+  const scheme = useColorScheme();
+  const {colors} = useTheme();
 
-  const passwordInput = useRef()
+  const passwordInput = useRef();
 
-  const viewPadding = theme.form.padding
-  const viewMargin = viewPadding
-  const fontSize = theme.form.fontSize
-  const viewBorderRadius = theme.common.borderRadius
+  const viewPadding = theme.form.padding;
+  const viewMargin = viewPadding;
+  const fontSize = theme.form.fontSize;
+  const viewBorderRadius = theme.common.borderRadius;
 
   const styles = StyleSheet.create({
     usernameView: {
@@ -37,7 +36,7 @@ const SignInForm = (props) => {
       borderWidth: 1,
       borderTopLeftRadius: viewBorderRadius,
       borderTopRightRadius: viewBorderRadius,
-      flexDirection: 'row'
+      flexDirection: 'row',
     },
 
     passwordView: {
@@ -49,7 +48,7 @@ const SignInForm = (props) => {
       borderTopWidth: 0,
       borderBottomLeftRadius: viewBorderRadius,
       borderBottomRightRadius: viewBorderRadius,
-      flexDirection: 'row'
+      flexDirection: 'row',
     },
 
     label: {
@@ -59,16 +58,16 @@ const SignInForm = (props) => {
       fontWeight: '500',
       flex: 1.5,
       includeFontPadding: false,
-      textAlignVertical: 'center'
+      textAlignVertical: 'center',
     },
 
     input: {
       padding: 0,
       color: colors.text,
       fontSize: fontSize,
-      flex: 3
-    }
-  })
+      flex: 3,
+    },
+  });
 
   return (
     <View>
@@ -79,7 +78,7 @@ const SignInForm = (props) => {
           value={props.usernameValue}
           placeholder={props.usernamePlaceholder}
           textContentType="username"
-          autoCompleteType={props.usernameIsEmail ? "email" : "username"}
+          autoCompleteType={props.usernameIsEmail ? 'email' : 'username'}
           autoCapitalize="none"
           autoFocus={true}
           clearButtonMode="while-editing"
@@ -102,10 +101,18 @@ const SignInForm = (props) => {
           style={styles.input}
         />
       </View>
-      <ButtonControl onPress={() => onSubmit()} text="Sign in" textColor="white" backgroundColor="blue" disabled={props.usernameValue.length === 0 || props.passwordValue.length === 0} />
+      <ButtonControl
+        onPress={() => onSubmit()}
+        text="Sign in"
+        textColor="white"
+        backgroundColor="blue"
+        disabled={
+          props.usernameValue.length === 0 || props.passwordValue.length === 0
+        }
+      />
     </View>
-  )
-}
+  );
+};
 
 SignInForm.propTypes = {
   usernameLabel: PropTypes.string,
@@ -116,8 +123,8 @@ SignInForm.propTypes = {
   passwordPlaceholder: PropTypes.string,
   usernameIsEmail: PropTypes.bool,
   buttonText: PropTypes.string,
-  buttonColor: PropTypes.oneOf(['default', 'blue', 'red'])
-}
+  buttonColor: PropTypes.oneOf(['default', 'blue', 'red']),
+};
 
 SignInForm.defaultProps = {
   usernameLabel: 'Username',
@@ -128,7 +135,7 @@ SignInForm.defaultProps = {
   passwordPlaceholder: 'Required',
   usernameIsEmail: false,
   buttonText: 'Sign In',
-  buttonColor: 'blue'
-}
+  buttonColor: 'blue',
+};
 
-export default SignInForm
+export default SignInForm;

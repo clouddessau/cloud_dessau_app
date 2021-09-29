@@ -1,81 +1,84 @@
-import React, { useContext } from 'react'
-import { AuthContext } from '../AuthProvider'
-import { useActionSheet } from '@expo/react-native-action-sheet'
-import BasicSectionList from '../components/views/BasicSectionList'
+import React, {useContext} from 'react';
+import {AuthContext} from '../AuthProvider';
+import {useActionSheet} from '@expo/react-native-action-sheet';
+import BasicSectionList from '../components/views/BasicSectionList';
 
-const SettingsScreen = ({ navigation }) => {
-  const { user, signOut } = useContext(AuthContext)
-  const { showActionSheetWithOptions } = useActionSheet();
+const SettingsScreen = ({navigation}) => {
+  const {user, signOut} = useContext(AuthContext);
+  const {showActionSheetWithOptions} = useActionSheet();
 
-  const accountListItemTitle = user ? user.email : "Sign In"
-  const accountListItemSubtitle = user ? "Sign Out" : ""
+  const accountListItemTitle = user ? user.email : 'Sign In';
+  const accountListItemSubtitle = user ? 'Sign Out' : '';
 
   const accountAction = () => {
     if (user) {
       showActionSheetWithOptions(
         {
-          options: ["Cancel", "Sign Out"],
+          options: ['Cancel', 'Sign Out'],
           cancelButtonIndex: 0,
-          destructiveButtonIndex: 1
+          destructiveButtonIndex: 1,
         },
         buttonIndex => {
           if (buttonIndex === 1) {
-            signOut()
+            signOut();
           }
-        }
-      )
+        },
+      );
     } else {
-      navigation.navigate('SignIn')
+      navigation.navigate('SignIn');
     }
-  }
+  };
 
   const aboutAction = () => {
-    navigation.navigate('About')
-  }
+    navigation.navigate('About');
+  };
 
-  const onItemSelected = (id) => {
+  const onItemSelected = id => {
     switch (id) {
-      case "accountItem":
-        accountAction()
-        break
-      case "aboutItem":
-        aboutAction()
-        break
+      case 'accountItem':
+        accountAction();
+        break;
+      case 'aboutItem':
+        aboutAction();
+        break;
       default:
-        break
+        break;
     }
-  }
+  };
 
   const listSections = [
     {
-      title: "Admin",
+      title: 'Admin',
       data: [
         {
           title: accountListItemTitle,
           subtitle: accountListItemSubtitle,
-          subtitleColor: "red",
-          leftIcon: "user",
+          subtitleColor: 'red',
+          leftIcon: 'user',
           numberOfLines: 1,
-          id: "accountItem"
-        }
-      ]
+          id: 'accountItem',
+        },
+      ],
     },
     {
-      title: "",
+      title: '',
       data: [
         {
-          title: "About",
-          leftIcon: "info",
-          rightIcon: "disclosureIndicator",
-          id: "aboutItem"
-        }
-      ]
-    }
-  ]
+          title: 'About',
+          leftIcon: 'info',
+          rightIcon: 'disclosureIndicator',
+          id: 'aboutItem',
+        },
+      ],
+    },
+  ];
 
   return (
-    <BasicSectionList sections={listSections} onItemSelected={id => onItemSelected(id)} />
-  )
-}
+    <BasicSectionList
+      sections={listSections}
+      onItemSelected={id => onItemSelected(id)}
+    />
+  );
+};
 
-export default SettingsScreen
+export default SettingsScreen;
