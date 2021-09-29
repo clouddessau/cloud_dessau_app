@@ -1,34 +1,33 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { StyleSheet } from 'react-native'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { useColorScheme } from 'react-native-appearance'
-import theme from '../../styles/theme'
+import React from 'react';
+import PropTypes from 'prop-types';
+import {StyleSheet, useColorScheme} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import theme from '../../styles/theme';
 
-const BaseView = (props) => {
-  const scheme = useColorScheme()
+const BaseView = props => {
+  const scheme = useColorScheme();
 
   const styles = StyleSheet.create({
     view: {
       padding: theme.container.padding,
       backgroundColor: theme.common.colors[scheme][props.background],
-      flex: 1
-    }
-  })
+      flex: 1,
+    },
+  });
 
-  return (
-    <SafeAreaView style={styles.view}>
-      {props.children}
-    </SafeAreaView>
-  )
-}
+  return <SafeAreaView style={styles.view}>{props.children}</SafeAreaView>;
+};
 
 BaseView.propTypes = {
-  background: PropTypes.oneOf(['background', 'backgroundGrouped', 'backgroundSecondary'])
-}
+  background: PropTypes.oneOf([
+    'background',
+    'backgroundGrouped',
+    'backgroundSecondary',
+  ]),
+};
 
 BaseView.defaultProps = {
-  background: 'background'
-}
+  background: 'background',
+};
 
-export default BaseView
+export default BaseView;

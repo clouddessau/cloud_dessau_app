@@ -13,7 +13,7 @@ const commonColors = {
     red: '#FF4000',
     yellow: '#FFC94C',
     green: '#52D411',
-    blue: '#006AFF'
+    blue: '#006AFF',
   },
   dark: {
     text: '#FFF',
@@ -26,9 +26,9 @@ const commonColors = {
     red: '#FF470A',
     yellow: '#FFC34C',
     green: '#56DE12',
-    blue: '#1A79FF'
-  }
-}
+    blue: '#1A79FF',
+  },
+};
 
 const theme = {
   common: {
@@ -47,7 +47,7 @@ const theme = {
         red: commonColors.light.red,
         yellow: commonColors.light.yellow,
         green: commonColors.light.green,
-        blue: commonColors.light.blue
+        blue: commonColors.light.blue,
       },
       dark: {
         text: commonColors.dark.text,
@@ -60,8 +60,8 @@ const theme = {
         red: commonColors.dark.red,
         yellow: commonColors.dark.yellow,
         green: commonColors.dark.green,
-        blue: commonColors.dark.blue
-      }
+        blue: commonColors.dark.blue,
+      },
     },
 
     borderRadiusSmall: 5,
@@ -69,15 +69,15 @@ const theme = {
 
     shadowOffset: {width: 0, height: 5},
     shadowOffsetLarge: {width: 0, height: 10},
-    shadowOpacity: .2,
+    shadowOpacity: 0.2,
     shadowRadius: 10,
     shadowRadiusLarge: 20,
     elevation: 5,
-    elevationLarge: 10
+    elevationLarge: 10,
   },
 
   container: {
-    padding: 16
+    padding: 16,
   },
 
   button: {
@@ -92,11 +92,11 @@ const theme = {
 
         disabled: '#CCCCCC',
 
-        none: '#00000000'
+        none: '#00000000',
       },
       dark: {
         default: commonColors.dark.background,
-        
+
         red: commonColors.dark.red,
         yellow: commonColors.dark.yellow,
         green: commonColors.dark.green,
@@ -104,7 +104,7 @@ const theme = {
 
         disabled: '#333333',
 
-        none: '#00000000'
+        none: '#00000000',
       },
 
       pressed: {
@@ -114,7 +114,7 @@ const theme = {
           red: '#E53900',
           yellow: '#F4B625',
           green: '#49BD0F',
-          blue: '#0661E0'
+          blue: '#0661E0',
         },
         dark: {
           default: 'rgb(20, 20, 20)',
@@ -122,11 +122,11 @@ const theme = {
           red: '#D63600',
           yellow: '#F4AF25',
           green: '#4DC610',
-          blue: '#066BF9'
-        }
+          blue: '#066BF9',
+        },
       },
 
-      padding: 14
+      padding: 14,
     },
 
     text: {
@@ -141,7 +141,7 @@ const theme = {
         yellow: commonColors.light.yellow,
         green: commonColors.light.green,
         blue: commonColors.light.blue,
-        disabled: '#999'
+        disabled: '#999',
       },
       dark: {
         text: commonColors.dark.text,
@@ -154,10 +154,10 @@ const theme = {
         yellow: commonColors.dark.yellow,
         green: commonColors.dark.green,
         blue: commonColors.dark.blue,
-        disabled: '#888'
+        disabled: '#888',
       },
 
-      size: 18
+      size: 18,
     },
   },
 
@@ -165,35 +165,35 @@ const theme = {
     item: {
       light: {
         background: '#FFF',
-        backgroundSelected: '#DDD'
+        backgroundSelected: '#DDD',
       },
       dark: {
         background: '#1C1C1C',
-        backgroundSelected: '#333'
+        backgroundSelected: '#333',
       },
 
       fontSize: 18,
-      iconSize: 24
+      iconSize: 24,
     },
 
     separator: {
       light: {
-        background: 'rgba(0, 0, 0, .1)'
+        background: 'rgba(0, 0, 0, .1)',
       },
       dark: {
-        background: 'rgba(255, 255, 255, .1)'
-      }
-    }
+        background: 'rgba(255, 255, 255, .1)',
+      },
+    },
   },
 
   form: {
     padding: 16,
-    fontSize: 16
+    fontSize: 16,
   },
 
   icon: {
-    size: 32
-  }
-}
+    size: 32,
+  },
+};
 
-export default theme
+export default theme;
