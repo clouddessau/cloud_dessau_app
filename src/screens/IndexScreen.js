@@ -7,29 +7,93 @@ import StatusView from '../components/views/StatusView';
 import ButtonControl from '../components/controls/ButtonControl';
 import ToolbarButtonControl from '../components/controls/ToolbarButtonControl';
 import firestore from '@react-native-firebase/firestore';
+
+// Import theme variables
 import theme from '../styles/theme';
+// Import Firebase configuration
+import firestoreConfig from '../config/firestore';
+
+// Load Firebase document and field names for [cloud] status from configuration
+// Use test collection in development environment
+const statusCollection = __DEV__
+  ? firestoreConfig.status.testCollection
+  : firestoreConfig.status.collection;
+const statusDoc = firestoreConfig.status.doc;
+const open = firestoreConfig.status.open;
+const windDown = firestoreConfig.status.windDown;
+
+// Load Firebase document and field names for [cloud] status activity from configuration
+// Use test collection in development environment
+const activityCollection = __DEV__
+  ? firestoreConfig.activity.testCollection
+  : firestoreConfig.activity.collection;
+const activityDoc = firestoreConfig.activity.doc;
+const activityType = firestoreConfig.activity.type;
+const activityDetail = firestoreConfig.activity.detail;
 
 const IndexScreen = ({navigation}) => {
   const {user} = useContext(AuthContext);
-  const [openStatus, setOpenStatus] = useState(false);
+  const [openState, setOpenState] = useState(false);
+  const [windDownState, setWindDownState] = useState(false);
+  const [activityTypeState, setActivityTypeState] = useState('');
+  const [activityDetailState, setActivityDetailState] = useState('');
 
   const onFirestoreResult = snapshot => {
-    setOpenStatus(snapshot.get('open'));
+    snapshot.forEach(docSnapshot => {
+      switch (docSnapshot.ref.path) {
+        case `${statusCollection}/${statusDoc}`:
+          onFirestoreStatusResult(docSnapshot);
+          break;
+        case `${activityCollection}/${activityDoc}`:
+          onFirestoreActivityResult(docSnapshot);
+          break;
+        default:
+          break;
+      }
+    });
+  };
+
+  const onFirestoreStatusResult = snapshot => {
+    setOpenState(snapshot.get(open));
+    setWindDownState(snapshot.get(windDown));
+  };
+
+  const onFirestoreActivityResult = snapshot => {
+    setActivityTypeState(snapshot.get(activityType));
+    setActivityDetailState(snapshot.get(activityDetail));
   };
 
   const onFirestoreError = error => {
-    console.log(error);
+    console.error(error);
   };
 
   firestore()
-    .collection('status')
-    .doc('cloud_status')
+    .collection(statusCollection)
     .onSnapshot(onFirestoreResult, onFirestoreError);
 
+  // Toggle [cloud] status
   const toggleOpenStatus = () => {
-    firestore().collection('status').doc('cloud_status').update({
-      open: !openStatus,
-    });
+    // If [cloud] gets closed, toggle "Wind Down"
+    if (openState) {
+      toggleWindDownStatus();
+    }
+
+    firestore()
+      .collection(statusCollection)
+      .doc(statusDoc)
+      .update({
+        [open]: !openState,
+      });
+  };
+
+  // Toggle "Wind Down"
+  const toggleWindDownStatus = () => {
+    firestore()
+      .collection(statusCollection)
+      .doc(statusDoc)
+      .update({
+        [windDown]: !windDownState,
+      });
   };
 
   const linkOpenFailedMessage = 'The link could not be opened.';
@@ -118,16 +182,27 @@ const IndexScreen = ({navigation}) => {
             paddingHorizontal: theme.container.padding,
             paddingVertical: theme.container.padding * 2,
           }}>
-          <StatusView openStatus={openStatus} />
+          <StatusView
+            openStatus={openState}
+            windDownStatus={windDownState}
+          />
         </ScrollView>
         <View style={styles.bottomView}>
           {user && (
             <View style={styles.toggleButtonView}>
               <ButtonControl
-                onPress={() => toggleOpenStatus()}
-                icon={openStatus ? 'doorClosed' : 'doorOpen'}
+                onPress={
+                  openState
+                    ? windDownState
+                      ? () => toggleOpenStatus()
+                      : () => toggleWindDownStatus()
+                    : () => toggleOpenStatus()
+                }
+                icon={openState ? 'doorClosed' : 'doorOpen'}
                 backgroundColor="default"
-                iconColor={openStatus ? 'red' : 'green'}
+                iconColor={
+                  openState ? (windDownState ? 'red' : 'yellow') : 'green'
+                }
                 iconSize={40}
                 rounded={true}
                 shadow={true}

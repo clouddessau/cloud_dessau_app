@@ -50,11 +50,19 @@ const StatusView = props => {
     closedText: {
       color: theme.common.colors[scheme].red,
     },
+
+    windDownText: {
+      color: theme.common.colors[scheme].yellow,
+    },
   });
 
   const textStyles = StyleSheet.compose(
     styles.text,
-    props.openStatus ? styles.openText : styles.closedText,
+    props.openStatus
+      ? props.windDownStatus
+        ? styles.windDownText
+        : styles.openText
+      : styles.closedText,
   );
 
   return (
@@ -66,7 +74,9 @@ const StatusView = props => {
       <View style={styles.textView}>
         <Text style={textStyles}>
           {props.openStatus
-            ? props.openStatusMessage
+            ? props.windDownStatus
+              ? props.windDownStatusMessage
+              : props.openStatusMessage
             : props.closedStatusMessage}
         </Text>
       </View>
@@ -76,14 +86,22 @@ const StatusView = props => {
 
 StatusView.propTypes = {
   openStatus: PropTypes.bool.isRequired,
+  windDownStatus: PropTypes.bool.isRequired,
+  activityType: PropTypes.string,
+  activityDetail: PropTypes.string,
   openStatusMessage: PropTypes.string,
   closedStatusMessage: PropTypes.string,
+  windDownStatusMessage: PropTypes.string,
 };
 
 StatusView.defaultProps = {
   openStatus: false,
+  windDownStatus: false,
+  activityType: '',
+  activityDetail: '',
   openStatusMessage: 'We’re open!',
   closedStatusMessage: 'We’re closed!',
+  windDownStatusMessage: 'We’re closing soon!',
 };
 
 export default StatusView;
