@@ -1,24 +1,16 @@
 const prefix = '../../assets/images/icons/';
 
 const icons = {
-  settings: {
-    src: require(`${prefix}settings.png`),
-  },
-
-  user: {
-    src: require(`${prefix}user.png`),
-  },
-
-  info: {
-    src: require(`${prefix}info.png`),
-  },
-
   caution: {
     src: require(`${prefix}caution.png`),
   },
 
-  externalLink: {
-    src: require(`${prefix}external_link.png`),
+  discord: {
+    src: require(`${prefix}discord.png`),
+  },
+
+  disclosureIndicator: {
+    src: require(`${prefix}disclosure_indicator.png`),
   },
 
   doorClosed: {
@@ -29,20 +21,32 @@ const icons = {
     src: require(`${prefix}door_open.png`),
   },
 
-  disclosureIndicator: {
-    src: require(`${prefix}disclosure_indicator.png`),
+  externalLink: {
+    src: require(`${prefix}external_link.png`),
   },
 
-  mail: {
-    src: require(`${prefix}mail.png`),
+  heart: {
+    src: require(`${prefix}heart.png`),
+  },
+
+  info: {
+    src: require(`${prefix}info.png`),
   },
 
   instagram: {
     src: require(`${prefix}instagram.png`),
   },
 
-  discord: {
-    src: require(`${prefix}discord.png`),
+  mail: {
+    src: require(`${prefix}mail.png`),
+  },
+
+  settings: {
+    src: require(`${prefix}settings.png`),
+  },
+
+  user: {
+    src: require(`${prefix}user.png`),
   },
 };
 

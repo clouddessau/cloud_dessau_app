@@ -29,6 +29,9 @@ const AboutScreen = ({navigation}) => {
       case 'feedbackItem':
         feedbackAction();
         break;
+      case 'contributorsItem':
+        contributorsAction();
+        break;
       case 'openSourceItem':
         openSourceAction();
         break;
@@ -140,6 +143,10 @@ const AboutScreen = ({navigation}) => {
     }
   }
 
+  const contributorsAction = () => {
+    navigation.navigate('Contributors');
+  };
+
   async function openSourceAction() {
     let openSourceURL = 'https://gitlab.dessau.design/cloud/cloud_dessau_app';
 
@@ -182,7 +189,7 @@ const AboutScreen = ({navigation}) => {
           id: 'instagramItem',
         },
         {
-          title: 'Join our Discord server',
+          title: 'Join our Discord Server',
           leftIcon: 'discord',
           id: 'discordItem',
         },
@@ -191,6 +198,12 @@ const AboutScreen = ({navigation}) => {
     {
       title: '',
       data: [
+        {
+          title: 'Contributors',
+          leftIcon: 'heart',
+          rightIcon: 'disclosureIndicator',
+          id: 'contributorsItem',
+        },
         {
           title: 'Open Source',
           leftIcon: 'externalLink',
