@@ -14,6 +14,7 @@ import IndexScreen from './screens/IndexScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import SignInScreen from './screens/SignInScreen';
 import AboutScreen from './screens/AboutScreen';
+import ContributorsScreen from './screens/ContributorsScreen';
 
 enableScreens();
 
@@ -68,6 +69,11 @@ const Routes = () => {
           options={{headerLargeTitle: true}}
           name="About"
           component={AboutScreen}
+        />
+        <RootStack.Screen
+          options={{headerLargeTitle: true}}
+          name="Contributors"
+          component={ContributorsScreen}
         />
       </RootStack.Navigator>
     </NavigationContainer>
