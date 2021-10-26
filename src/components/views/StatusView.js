@@ -8,6 +8,7 @@ const StatusView = props => {
 
   const openImage = require('../../../assets/images/status_open.png');
   const closedImage = require('../../../assets/images/status_closed.png');
+  const windDownImage = require('../../../assets/images/status_winddown.png');
 
   const styles = StyleSheet.create({
     container: {
@@ -69,7 +70,13 @@ const StatusView = props => {
     <View style={styles.container}>
       <Image
         style={styles.image}
-        source={props.openStatus ? openImage : closedImage}
+        source={
+          props.windDownStatus
+            ? windDownImage
+            : props.openStatus
+            ? openImage
+            : closedImage
+        }
       />
       <View style={styles.textView}>
         <Text style={textStyles}>
