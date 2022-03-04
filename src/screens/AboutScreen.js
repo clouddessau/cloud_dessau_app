@@ -148,7 +148,7 @@ const AboutScreen = ({navigation}) => {
   };
 
   async function openSourceAction() {
-    let openSourceURL = 'https://gitlab.dessau.design/cloud/cloud_dessau_app';
+    let openSourceURL = 'https://github.com/clouddessau/cloud_dessau_app';
 
     const supported = await Linking.canOpenURL(openSourceURL);
 
